@@ -1,0 +1,206 @@
+{
+  "site": {
+    "name": "GameOdyssey",
+    "tagline": "let the journey begin",
+    "company": "GameOdyssey Ltd",
+    "foundedYear": 2010,
+    "contactEmail": "info@gameodyssey.com",
+    "social": {
+      "facebook": null,
+      "x": null,
+      "youtube": null
+    },
+    "about": [
+      "Game Odyssey — GO — unites fun-loving Earthlings through a variety of free and cool social games.",
+      "GO is a London-based studio that develops and distributes games across multiple platforms. Our classic catalogue now plays straight from your browser: no download, no sign-up, just hit play.",
+      "Our mission is to build exciting games that Odysseans can enjoy alone or among friends."
+    ]
+  },
+  "games": [
+    {
+      "slug": "backgammon",
+      "name": "GO Backgammon",
+      "shortName": "Backgammon",
+      "oneLiner": "The oldest game in history on GO's stunning tables.",
+      "tagline": "Roll the dice and make your move!",
+      "blurb": [
+        "Show your skill and strategy by playing one of the oldest games in history on Game Odyssey's stunning Backgammon tables!",
+        "Play with old and new friends in this timeless game with classic rules or, if you are a pro looking for a challenge, take on others in daily tournaments and battle in brand new modes of play.",
+        "GO's Backgammon has lots to offer to both new players, with a fun and relaxing atmosphere, and veterans, with the excitement of tense competition and high stakes."
+      ],
+      "features": [
+        "Classic rules",
+        "Daily tournaments",
+        "New modes of play"
+      ],
+      "playable": true,
+      "unity": {
+        "build": "GoGammon",
+        "width": 1024,
+        "height": 768
+      },
+      "shots": 0,
+      "accent": "#c9a86a",
+      "heroPosition": "center top"
+    },
+    {
+      "slug": "brain-drops",
+      "name": "Brain Drops",
+      "shortName": "Brain Drops",
+      "oneLiner": "Heads up, think fast — type to save the town.",
+      "tagline": "Have you got the brain for this game?",
+      "blurb": [
+        "A cosmic jar of objects is hurtling towards the town of Brain Drops. It is your job to protect the town by typing the object names to destroy them.",
+        "With over 100 different objects to identify, multiple achievements to unlock and different backgrounds to acquire, this game has a lot waiting for you!",
+        "Challenge friends to exciting one-on-one wagers for GO Coins or casually blast your way through waves of earth-bound items in single play mode."
+      ],
+      "features": [
+        "100+ objects to identify",
+        "Achievements to unlock",
+        "Single play or one-on-one"
+      ],
+      "playable": true,
+      "unity": {
+        "build": "BrainDrops",
+        "width": 1024,
+        "height": 768
+      },
+      "shots": 3,
+      "accent": "#2f8f4e",
+      "heroPosition": "center top"
+    },
+    {
+      "slug": "bug-me-not",
+      "name": "Bug Me Not",
+      "shortName": "Bug Me Not",
+      "oneLiner": "Capture the most wanted insects and clean up this town.",
+      "tagline": "Take on the army of insects now!",
+      "blurb": [
+        "A mass break out from InsecTraz Prison sees an army of criminal and undesirable insects causing havoc at picnics across the world.",
+        "By using bug sprays and a Robo Spider, capture the most wanted, earn GO Coins and clean up this town.",
+        "Each level brings exciting new challenges as the intensity increases.",
+        "Compete with friends and climb the leaderboard to become the Best Bounty Hunter of them all!"
+      ],
+      "features": [
+        "Bug sprays & Robo Spider",
+        "Escalating levels",
+        "Leaderboards"
+      ],
+      "playable": true,
+      "unity": {
+        "build": "BugMeNot",
+        "width": 1024,
+        "height": 768
+      },
+      "shots": 3,
+      "accent": "#c8383a",
+      "heroPosition": "center 78%"
+    },
+    {
+      "slug": "v-type",
+      "name": "V-Type",
+      "shortName": "V-Type",
+      "oneLiner": "Type to shoot the falling words.",
+      "tagline": "Type to shoot!",
+      "blurb": [
+        "Words are raining down from the skies and your keyboard is the only weapon. Type each falling word before it reaches the ground to blast it out of the air.",
+        "The pace ramps up with every wave, so accuracy and speed both count. Chain fast kills for bigger scores and climb the ranks.",
+        "V-Type is a classic-styled shoot 'em up for anyone who wants to sharpen their typing while having a blast."
+      ],
+      "features": [
+        "Fast-paced typing action",
+        "Escalating waves",
+        "Score multipliers"
+      ],
+      "playable": true,
+      "unity": {
+        "build": "VType",
+        "width": 960,
+        "height": 600
+      },
+      "shots": 3,
+      "accent": "#d59b3c",
+      "heroPosition": "center top"
+    },
+    {
+      "slug": "vocabularious",
+      "name": "Vocabularious",
+      "shortName": "Vocabularious",
+      "oneLiner": "Seven letters, countless possibilities.",
+      "tagline": "How Vocabularious are you? Find out now!",
+      "blurb": [
+        "Seven letters, countless possibilities.",
+        "Identify as many words hidden in the letter jumble before the timer runs out.",
+        "Play against yourself or compete with friends to journey up the leaderboard and discover who is the most Vocabularious amongst you."
+      ],
+      "features": [
+        "Seven-letter jumbles",
+        "Beat the clock",
+        "Leaderboards"
+      ],
+      "playable": true,
+      "unity": {
+        "build": "Vocabularious",
+        "width": 1024,
+        "height": 768
+      },
+      "shots": 3,
+      "accent": "#1fb6d8",
+      "heroPosition": "center top"
+    },
+    {
+      "slug": "word-invader",
+      "name": "Word Invader",
+      "shortName": "Word Invader",
+      "oneLiner": "A side-scrolling space shoot 'em up that isn't for the faint-hearted.",
+      "tagline": "Are you ready to take on the challenge?",
+      "blurb": [
+        "A hostile foe has begun to bomb the Word Planets of the Outer Colonies, causing debris to tumble through a worm hole and threaten Earth's existence.",
+        "You have been assigned to collect the falling letters and cease the bombing campaign by destroying the hostile craft and taking out their leader.",
+        "Collect power ups, earn GO Coins and unlock hidden prizes as you battle evil in Game Odyssey's toughest game yet!",
+        "Word Invader is a side-scrolling, classic-styled space shoot 'em up that isn't for the faint-hearted."
+      ],
+      "features": [
+        "Side-scrolling shooter",
+        "Power ups & hidden prizes",
+        "Boss battles"
+      ],
+      "playable": true,
+      "unity": {
+        "build": "WI",
+        "width": 1024,
+        "height": 768
+      },
+      "shots": 3,
+      "accent": "#3fae9c",
+      "heroPosition": "center top",
+      "exhaust": {
+        "x": 34.8,
+        "y": 39.6
+      }
+    },
+    {
+      "slug": "poker",
+      "name": "GO Poker",
+      "shortName": "Poker",
+      "oneLiner": "Hold 'Em on Game Odyssey's luxury tables.",
+      "tagline": "May Lady Luck be on your side!",
+      "blurb": [
+        "Join the fun and excitement of Hold 'Em on Game Odyssey's luxury Poker tables.",
+        "Meet old and new friends at any table you like, chat as you play and make your mark by competing in tournaments to establish your chip ranking and climb the GO leaderboard.",
+        "Visit the GO gift shop to purchase unique icons to deck out your Profile page. Earn GO coins to treat yourself and your friends to gifts."
+      ],
+      "features": [
+        "Texas Hold 'Em",
+        "Tournaments",
+        "Chip rankings"
+      ],
+      "playable": false,
+      "status": "Coming back soon",
+      "unity": null,
+      "shots": 3,
+      "accent": "#b08c5a",
+      "heroPosition": "center top"
+    }
+  ]
+}

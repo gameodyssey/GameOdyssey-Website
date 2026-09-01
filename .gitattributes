@@ -33,8 +33,8 @@
 *.wasm  binary
 *.data  binary
 *.unityweb binary
-Games/**/Build/*.js  binary -diff
-gogammon/Build/*.js  binary -diff
+play/**/Build/*.js   binary -diff
+_legacy/**/Build/*.js binary -diff
 
 # ---------------------------------------------------------------------------
 # Optional: Git LFS for the large game builds and trailers (~430 MB total).

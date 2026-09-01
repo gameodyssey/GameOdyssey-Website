@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · GameOdyssey</title>
+  <meta name="description" content="Get in touch with GameOdyssey Ltd.">
+  <meta property="og:site_name" content="GameOdyssey">
+  <meta property="og:title" content="Contact · GameOdyssey">
+  <meta property="og:description" content="Get in touch with GameOdyssey Ltd.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#14a4cf">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/site/favicon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/site/favicon-180.png">
+  <link rel="preload" href="assets/fonts/ARLRDBD.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=mtiuc3c3">
+</head>
+<body class="page-contact">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="GameOdyssey home">
+      <img src="assets/img/site/logo.png" alt="GameOdyssey — let the journey begin" width="250" height="71">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="section">
+    <div class="container contact">
+      <div class="contact__intro">
+        <h1 class="section__title">Contact</h1>
+        <p>Found a bug, got a question, or just want to say hello? Drop us a line and we'll get back to you.</p>
+        <p class="contact__email">Or email us directly: <a href="mailto:info@gameodyssey.com">info@gameodyssey.com</a></p>
+      </div>
+      <form class="contact-form" method="post" action="contact.php" novalidate>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required maxlength="100">
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" required maxlength="150">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="8" required maxlength="5000"></textarea>
+        </div>
+        <div class="field field--hp" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="ts" value="">
+        <button class="btn btn--primary btn--lg" type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+  <div class="aliens" aria-hidden="true">
+  <img src="assets/img/site/aliens.png" alt="" width="1600" height="262" loading="lazy">
+  <div class="bob-stage">
+    <div class="bob-runner bob-runner--ltr" style="--s:0.5;--cross:38s;--step:1.4s;--delay:-6s;--bottom:34px"><div class="bob"></div></div>
+    <div class="bob-runner bob-runner--rtl" style="--s:0.55;--cross:44s;--step:1.3s;--delay:-21s;--bottom:30px"><div class="bob"></div></div>
+    <div class="bob-runner bob-runner--ltr" style="--s:0.8;--cross:31s;--step:1.5s;--delay:-14s;--bottom:12px"><div class="bob"></div></div>
+    <div class="bob-runner bob-runner--rtl" style="--s:1;--cross:26s;--step:1.2s;--delay:-3s;--bottom:0px"><div class="bob"></div></div>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <h2 class="site-footer__heading">Main</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="site-footer__heading">Games</h2>
+      <ul>
+        <li><a href="games/backgammon.html">Backgammon</a></li>
+        <li><a href="games/brain-drops.html">Brain Drops</a></li>
+        <li><a href="games/bug-me-not.html">Bug Me Not</a></li>
+        <li><a href="games/v-type.html">V-Type</a></li>
+        <li><a href="games/vocabularious.html">Vocabularious</a></li>
+        <li><a href="games/word-invader.html">Word Invader</a></li>
+        <li><a href="games/poker.html">Poker</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h2 class="site-footer__heading">Legal</h2>
+      <ul>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms of use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© GameOdyssey Ltd 2010–2026</p>
+    <p><a href="privacy.html">Privacy policy</a> | <a href="terms.html">Terms of use</a></p>
+  </div>
+</footer>
+<script src="assets/js/site.js?v=mtiuc3c3" defer></script>
+</body>
+</html>

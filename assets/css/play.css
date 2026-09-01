@@ -1,0 +1,67 @@
+/* Unity WebGL wrapper pages (play/<game>/index.html) */
+@font-face {
+  font-family: "GO Rounded";
+  src: url("../fonts/ARLRDBD.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: #111214; color: #d5d7da;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  display: flex; flex-direction: column; min-height: 100vh;
+}
+
+.play-bar {
+  display: flex; align-items: center; gap: 1rem; padding: 0.5rem 1rem; min-height: 52px;
+  background: linear-gradient(180deg, #62cdef, #14a4cf); color: #fff;
+  font-family: "GO Rounded", "Arial Rounded MT Bold", system-ui, sans-serif;
+}
+.play-bar__back { color: #fff; text-decoration: none; white-space: nowrap; font-size: 0.9rem; }
+.play-bar__back:hover { text-decoration: underline; }
+.play-bar__title { flex: 1; text-align: center; font-size: 1rem; }
+.play-bar__btn {
+  font: inherit; font-size: 0.85rem; color: #fff; cursor: pointer;
+  border: 0; border-radius: 6px; padding: 0.45em 0.9em;
+  background: rgba(0, 60, 90, 0.35); box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+}
+.play-bar__btn:disabled { opacity: 0.5; cursor: default; }
+.play-bar__btn:not(:disabled):hover { background: rgba(0, 60, 90, 0.55); }
+
+.play-stage {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.75rem; padding: 1rem;
+}
+
+/* The canvas keeps the build's native aspect ratio (--w / --h) and scales to
+   whatever space is available, capped at 1.25x native so the UI stays crisp. */
+#unity-container.unity-desktop {
+  position: relative;
+  width: min(100%, calc(var(--w) * 1.25px), calc((100vh - 52px - 5rem) * var(--w) / var(--h)));
+  aspect-ratio: var(--w) / var(--h);
+  background: #000; border-radius: 6px; overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+#unity-canvas { width: 100%; height: 100%; display: block; background: #231f20; outline: 0; }
+
+#unity-container.unity-mobile { position: fixed; inset: 0; width: 100%; height: 100%; border-radius: 0; }
+.is-mobile .play-note, .is-mobile .play-bar { display: none; }
+
+#unity-loading-bar {
+  position: absolute; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.6rem; background: radial-gradient(ellipse at center, #1d2c33, #0e1416 70%); text-align: center; padding: 1rem;
+}
+.loading-logo { width: 96px; height: 96px; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+.loading-text { margin: 0.5rem 0 0; font-family: "GO Rounded", system-ui, sans-serif; color: #fff; }
+.loading-hint { margin: 0; font-size: 0.8rem; color: #8f949a; max-width: 320px; }
+#unity-progress-bar-empty { width: min(280px, 70%); height: 12px; border-radius: 6px; background: rgba(255,255,255,0.12); overflow: hidden; }
+#unity-progress-bar-full { width: 0%; height: 100%; background: linear-gradient(90deg, #5ecbef, #14a4cf); transition: width 0.2s ease; }
+
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translateX(-50%); display: none; max-width: 90%; }
+#unity-warning div { padding: 10px 14px; border-radius: 6px; background: #fff; color: #222; margin-bottom: 6px; }
+#unity-warning .is-error { background: #c8383a; color: #fff; }
+#unity-warning .is-warning { background: #ffe066; }
+
+.play-note { margin: 0; font-size: 0.85rem; color: #8f949a; text-align: center; max-width: 640px; }

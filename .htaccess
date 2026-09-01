@@ -1,0 +1,55 @@
+# GameOdyssey — Apache / LiteSpeed config for Hostinger shared hosting.
+
+# No directory listings; default document.
+Options -Indexes
+DirectoryIndex index.html index.php
+
+# Keep the source folders and repo internals off the web.
+RedirectMatch 404 ^/(_legacy|tools|\.git|\.github)(/|$)
+<FilesMatch "^(\.gitignore|\.gitattributes|README\.md|package\.json)$">
+    Require all denied
+</FilesMatch>
+
+# Friendly error page.
+ErrorDocument 404 /404.html
+
+# Unity WebGL builds need the correct MIME types to stream-compile.
+AddType application/wasm .wasm
+AddType application/octet-stream .data
+AddType font/ttf .ttf
+AddType video/mp4 .mp4
+
+# Compress text and the large Unity payloads (they ship uncompressed).
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain application/javascript application/json image/svg+xml
+    AddOutputFilterByType DEFLATE application/wasm application/octet-stream
+</IfModule>
+
+# Caching. Game builds are large; keep them a week so repeat plays are fast
+# but a redeploy still picks up within days. Images/video a month.
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType video/mp4 "access plus 1 month"
+    ExpiresByType application/wasm "access plus 1 week"
+    ExpiresByType application/octet-stream "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Force HTTPS once the certificate is active on Hostinger (uncomment to enable).
+#<IfModule mod_rewrite.c>
+#    RewriteEngine On
+#    RewriteCond %{HTTPS} !=on
+#    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#</IfModule>

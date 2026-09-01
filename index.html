@@ -1,279 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameOdyssey</title>
-    <link rel="stylesheet" href="/Css/style.css">
-    <style>
-        @font-face {
-            font-family: ArialRoundedMTBold;
-            src: url("Fonts/ARLRDBD.ttf");
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameOdyssey · let the journey begin</title>
+  <meta name="description" content="Free browser games from Game Odyssey: Backgammon, Brain Drops, Bug Me Not, V-Type, Vocabularious and Word Invader. No download, no sign-up — just play.">
+  <meta property="og:site_name" content="GameOdyssey">
+  <meta property="og:title" content="GameOdyssey · let the journey begin">
+  <meta property="og:description" content="Free browser games from Game Odyssey: Backgammon, Brain Drops, Bug Me Not, V-Type, Vocabularious and Word Invader. No download, no sign-up — just play.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/games/word-invader/banner.jpg">
+  <meta name="theme-color" content="#14a4cf">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/site/favicon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/site/favicon-180.png">
+  <link rel="preload" href="assets/fonts/ARLRDBD.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=mtiuc3c3">
 </head>
-<body>
-    <div class="navbar">
-        <img src="Images/Logo.png" alt="logo" class="logo" onclick="location.href='index.html';">
-        <ul class="MenuBtns">
-            <li><a href="index.html">home</a></li>
-            <li><a href="Pages/games.html">games</a></li>
-            <li><a href="Pages/contact.html">contact</a></li>
-        </ul>
+<body class="page-home">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="GameOdyssey home">
+      <img src="assets/img/site/logo.png" alt="GameOdyssey — let the journey begin" width="250" height="71">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero" aria-roledescription="carousel" aria-label="Featured games">
+    <div class="hero__viewport">
+      <ul class="hero__track">
+      <li class="slide" data-index="0" aria-roledescription="slide" aria-label="1 of 7: GO Backgammon">
+        <div class="slide__art">
+          <img src="assets/img/games/backgammon/banner.jpg" srcset="assets/img/games/backgammon/banner-960.jpg 960w, assets/img/games/backgammon/banner.jpg 1920w" sizes="100vw" alt="" width="1920" height="600" fetchpriority="high">
+          
+        </div>
+        <div class="slide__panel">
+          <p class="slide__kicker">Roll the dice and make your move!</p>
+          <h2 class="slide__title">GO Backgammon</h2>
+          <p class="slide__text">Show your skill and strategy by playing one of the oldest games in history on Game Odyssey's stunning Backgammon tables!</p>
+          <div class="slide__actions"><a class="btn btn--primary" href="play/backgammon/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost" href="games/backgammon.html">Learn more</a></div>
+        </div>
+      </li>
+      <li class="slide" data-index="1" aria-roledescription="slide" aria-label="2 of 7: Brain Drops" aria-hidden="true">
+        <div class="slide__art">
+          <img src="assets/img/games/brain-drops/banner.jpg" srcset="assets/img/games/brain-drops/banner-960.jpg 960w, assets/img/games/brain-drops/banner.jpg 1920w" sizes="100vw" alt="" width="1920" height="600" loading="lazy">
+          
+        </div>
+        <div class="slide__panel">
+          <p class="slide__kicker">Have you got the brain for this game?</p>
+          <h2 class="slide__title">Brain Drops</h2>
+          <p class="slide__text">A cosmic jar of objects is hurtling towards the town of Brain Drops. It is your job to protect the town by typing the object names to destroy them.</p>
+          <div class="slide__actions"><a class="btn btn--primary" href="play/brain-drops/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost" href="games/brain-drops.html">Learn more</a></div>
+        </div>
+      </li>
+      <li class="slide" data-index="2" aria-roledescription="slide" aria-label="3 of 7: Bug Me Not" aria-hidden="true">
+        <div class="slide__art">
+          <img src="assets/img/games/bug-me-not/banner.jpg" srcset="assets/img/games/bug-me-not/banner-960.jpg 960w, assets/img/games/bug-me-not/banner.jpg 1920w" sizes="100vw" alt="" width="1920" height="600" loading="lazy">
+          
+        </div>
+        <div class="slide__panel">
+          <p class="slide__kicker">Take on the army of insects now!</p>
+          <h2 class="slide__title">Bug Me Not</h2>
+          <p class="slide__text">A mass break out from InsecTraz Prison sees an army of criminal and undesirable insects causing havoc at picnics across the world.</p>
+          <div class="slide__actions"><a class="btn btn--primary" href="play/bug-me-not/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost" href="games/bug-me-not.html">Learn more</a></div>
+        </div>
+      </li>
+      <li class="slide" data-index="3" aria-roledescription="slide" aria-label="4 of 7: V-Type" aria-hidden="true">
+        <div class="slide__art">
+          <img src="assets/img/games/v-type/banner.jpg" srcset="assets/img/games/v-type/banner-960.jpg 960w, assets/img/games/v-type/banner.jpg 1920w" sizes="100vw" alt="" width="1920" height="600" loading="lazy">
+          
+        </div>
+        <div class="slide__panel">
+          <p class="slide__kicker">Type to shoot!</p>
+          <h2 class="slide__title">V-Type</h2>
+          <p class="slide__text">Words are raining down from the skies and your keyboard is the only weapon. Type each falling word before it reaches the ground to blast it out of the air.</p>
+          <div class="slide__actions"><a class="btn btn--primary" href="play/v-type/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost" href="games/v-type.html">Learn more</a></div>
+        </div>
+      </li>
+      <li class="slide" data-index="4" aria-roledescription="slide" aria-label="5 of 7: Vocabularious" aria-hidden="true">
+        <div class="slide__art">
+          <img src="assets/img/games/vocabularious/banner.jpg" srcset="assets/img/games/vocabularious/banner-960.jpg 960w, assets/img/games/vocabularious/banner.jpg 1920w" sizes="100vw" alt="" width="1920" height="600" loading="lazy">
+          
+        </div>
+        <div class="slide__panel">
+          <p class="slide__kicker">How Vocabularious are you? Find out now!</p>
+          <h2 class="slide__title">Vocabularious</h2>
+          <p class="slide__text">Seven letters, countless possibilities.</p>
+          <div class="slide__actions"><a class="btn btn--primary" href="play/vocabularious/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost" href="games/vocabularious.html">Learn more</a></div>
+        </div>
+      </li>
+      <li class="slide" data-index="5" aria-roledescription="slide" aria-label="6 of 7: Word Invader" aria-hidden="true">
+        <div class="slide__art">
+          <img src="assets/img/games/word-invader/banner.jpg" srcset="assets/img/games/word-invader/banner-960.jpg 960w, assets/img/games/word-invader/banner.jpg 1920w" sizes="100vw" alt="" width="1920" height="600" loading="lazy">
+          <span class="exhaust" style="--x:34.8%;--y:39.6%" aria-hidden="true"><i></i><i></i></span>
+        </div>
+        <div class="slide__panel">
+          <p class="slide__kicker">Are you ready to take on the challenge?</p>
+          <h2 class="slide__title">Word Invader</h2>
+          <p class="slide__text">A hostile foe has begun to bomb the Word Planets of the Outer Colonies, causing debris to tumble through a worm hole and threaten Earth's existence.</p>
+          <div class="slide__actions"><a class="btn btn--primary" href="play/word-invader/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost" href="games/word-invader.html">Learn more</a></div>
+        </div>
+      </li>
+      <li class="slide" data-index="6" aria-roledescription="slide" aria-label="7 of 7: GO Poker" aria-hidden="true">
+        <div class="slide__art">
+          <img src="assets/img/games/poker/banner.jpg" srcset="assets/img/games/poker/banner-960.jpg 960w, assets/img/games/poker/banner.jpg 1920w" sizes="100vw" alt="" width="1920" height="600" loading="lazy">
+          
+        </div>
+        <div class="slide__panel">
+          <p class="slide__kicker">May Lady Luck be on your side!</p>
+          <h2 class="slide__title">GO Poker</h2>
+          <p class="slide__text">Join the fun and excitement of Hold 'Em on Game Odyssey's luxury Poker tables.</p>
+          <div class="slide__actions"><span class="btn btn--primary is-disabled" aria-disabled="true">Coming back soon</span><a class="btn btn--ghost" href="games/poker.html">Learn more</a></div>
+        </div>
+      </li>
+      </ul>
+      <button type="button" class="hero__arrow hero__arrow--prev" data-dir="-1" aria-label="Previous game"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+      <button type="button" class="hero__arrow hero__arrow--next" data-dir="1" aria-label="Next game"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="m8.6 16.6 1.4 1.4 6-6-6-6-1.4 1.4 4.6 4.6z"/></svg></button>
+    </div>
+    <div class="hero-nav" role="group" aria-label="Choose a game">
+      <button type="button" class="hero-nav__btn is-active" data-goto="0" aria-label="Show GO Backgammon" aria-current="true"><img src="assets/img/games/backgammon/icon.png" alt="" width="56" height="56"></button>
+      <button type="button" class="hero-nav__btn" data-goto="1" aria-label="Show Brain Drops"><img src="assets/img/games/brain-drops/icon.png" alt="" width="56" height="56"></button>
+      <button type="button" class="hero-nav__btn" data-goto="2" aria-label="Show Bug Me Not"><img src="assets/img/games/bug-me-not/icon.png" alt="" width="56" height="56"></button>
+      <button type="button" class="hero-nav__btn" data-goto="3" aria-label="Show V-Type"><img src="assets/img/games/v-type/icon.png" alt="" width="56" height="56"></button>
+      <button type="button" class="hero-nav__btn" data-goto="4" aria-label="Show Vocabularious"><img src="assets/img/games/vocabularious/icon.png" alt="" width="56" height="56"></button>
+      <button type="button" class="hero-nav__btn" data-goto="5" aria-label="Show Word Invader"><img src="assets/img/games/word-invader/icon.png" alt="" width="56" height="56"></button>
+      <button type="button" class="hero-nav__btn" data-goto="6" aria-label="Show GO Poker"><img src="assets/img/games/poker/icon.png" alt="" width="56" height="56"></button>
+      <button type="button" class="hero-nav__pause" data-pause aria-pressed="false" aria-label="Pause auto-play"></button>
+    </div>
+  </section>
+
+  <section class="section" id="games">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Our games</h2>
+        <p class="section__lead">Six classics, playable right here in your browser. Desktop with a keyboard recommended.</p>
+      </div>
+      <div class="games-grid">
+  <article class="game-card">
+  <a class="game-card__media" href="games/backgammon.html" tabindex="-1" aria-hidden="true">
+    <img src="assets/img/games/backgammon/icon.png" alt="" width="200" height="200" loading="lazy">
+  </a>
+  <div class="game-card__body">
+    <h3 class="game-card__title"><a href="games/backgammon.html">GO Backgammon</a></h3>
+    <p class="game-card__text">The oldest game in history on GO's stunning tables.</p>
+    <div class="game-card__actions"><a class="btn btn--primary btn--sm" href="play/backgammon/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost btn--sm" href="games/backgammon.html">Learn more</a></div>
+  </div>
+</article>
+  <article class="game-card">
+  <a class="game-card__media" href="games/brain-drops.html" tabindex="-1" aria-hidden="true">
+    <img src="assets/img/games/brain-drops/icon.png" alt="" width="200" height="200" loading="lazy">
+  </a>
+  <div class="game-card__body">
+    <h3 class="game-card__title"><a href="games/brain-drops.html">Brain Drops</a></h3>
+    <p class="game-card__text">Heads up, think fast — type to save the town.</p>
+    <div class="game-card__actions"><a class="btn btn--primary btn--sm" href="play/brain-drops/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost btn--sm" href="games/brain-drops.html">Learn more</a></div>
+  </div>
+</article>
+  <article class="game-card">
+  <a class="game-card__media" href="games/bug-me-not.html" tabindex="-1" aria-hidden="true">
+    <img src="assets/img/games/bug-me-not/icon.png" alt="" width="200" height="200" loading="lazy">
+  </a>
+  <div class="game-card__body">
+    <h3 class="game-card__title"><a href="games/bug-me-not.html">Bug Me Not</a></h3>
+    <p class="game-card__text">Capture the most wanted insects and clean up this town.</p>
+    <div class="game-card__actions"><a class="btn btn--primary btn--sm" href="play/bug-me-not/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost btn--sm" href="games/bug-me-not.html">Learn more</a></div>
+  </div>
+</article>
+  <article class="game-card">
+  <a class="game-card__media" href="games/v-type.html" tabindex="-1" aria-hidden="true">
+    <img src="assets/img/games/v-type/icon.png" alt="" width="200" height="200" loading="lazy">
+  </a>
+  <div class="game-card__body">
+    <h3 class="game-card__title"><a href="games/v-type.html">V-Type</a></h3>
+    <p class="game-card__text">Type to shoot the falling words.</p>
+    <div class="game-card__actions"><a class="btn btn--primary btn--sm" href="play/v-type/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost btn--sm" href="games/v-type.html">Learn more</a></div>
+  </div>
+</article>
+  <article class="game-card">
+  <a class="game-card__media" href="games/vocabularious.html" tabindex="-1" aria-hidden="true">
+    <img src="assets/img/games/vocabularious/icon.png" alt="" width="200" height="200" loading="lazy">
+  </a>
+  <div class="game-card__body">
+    <h3 class="game-card__title"><a href="games/vocabularious.html">Vocabularious</a></h3>
+    <p class="game-card__text">Seven letters, countless possibilities.</p>
+    <div class="game-card__actions"><a class="btn btn--primary btn--sm" href="play/vocabularious/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost btn--sm" href="games/vocabularious.html">Learn more</a></div>
+  </div>
+</article>
+  <article class="game-card">
+  <a class="game-card__media" href="games/word-invader.html" tabindex="-1" aria-hidden="true">
+    <img src="assets/img/games/word-invader/icon.png" alt="" width="200" height="200" loading="lazy">
+  </a>
+  <div class="game-card__body">
+    <h3 class="game-card__title"><a href="games/word-invader.html">Word Invader</a></h3>
+    <p class="game-card__text">A side-scrolling space shoot 'em up that isn't for the faint-hearted.</p>
+    <div class="game-card__actions"><a class="btn btn--primary btn--sm" href="play/word-invader/"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Play now</a><a class="btn btn--ghost btn--sm" href="games/word-invader.html">Learn more</a></div>
+  </div>
+</article>
+  <article class="game-card game-card--soon">
+  <a class="game-card__media" href="games/poker.html" tabindex="-1" aria-hidden="true">
+    <img src="assets/img/games/poker/icon.png" alt="" width="200" height="200" loading="lazy">
+  </a>
+  <div class="game-card__body">
+    <h3 class="game-card__title"><a href="games/poker.html">GO Poker</a></h3>
+    <p class="game-card__text">Hold 'Em on Game Odyssey's luxury tables.</p>
+    <div class="game-card__actions"><span class="btn btn--primary btn--sm is-disabled" aria-disabled="true">Coming back soon</span><a class="btn btn--ghost btn--sm" href="games/poker.html">Learn more</a></div>
+  </div>
+</article>
+</div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="about">
+    <div class="container about">
+      <div class="about__text">
+        <h2 class="section__title">We are what we play</h2>
+        <p>Game Odyssey — GO — unites fun-loving Earthlings through a variety of free and cool social games.</p>
+        <p>GO is a London-based studio that develops and distributes games across multiple platforms. Our classic catalogue now plays straight from your browser: no download, no sign-up, just hit play.</p>
+        <p>Our mission is to build exciting games that Odysseans can enjoy alone or among friends.</p>
+        <p><a class="btn btn--primary" href="games.html">Browse the games</a></p>
+      </div>
+      <figure class="about__figure">
+        <img src="assets/img/site/cinema.jpg" alt="The GO aliens settle in at the cinema" width="1200" height="657" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <div class="aliens" aria-hidden="true">
+  <img src="assets/img/site/aliens.png" alt="" width="1600" height="262" loading="lazy">
+  <div class="bob-stage">
+    <div class="bob-runner bob-runner--ltr" style="--s:0.5;--cross:38s;--step:1.4s;--delay:-6s;--bottom:34px"><div class="bob"></div></div>
+    <div class="bob-runner bob-runner--rtl" style="--s:0.55;--cross:44s;--step:1.3s;--delay:-21s;--bottom:30px"><div class="bob"></div></div>
+    <div class="bob-runner bob-runner--ltr" style="--s:0.8;--cross:31s;--step:1.5s;--delay:-14s;--bottom:12px"><div class="bob"></div></div>
+    <div class="bob-runner bob-runner--rtl" style="--s:1;--cross:26s;--step:1.2s;--delay:-3s;--bottom:0px"><div class="bob"></div></div>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <h2 class="site-footer__heading">Main</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
     <div>
-        <ul class="SocialBtns">
-            <img src="Images/SocialBtn_FB.png" alt="" class="fb">
-            <img src="Images/SocialBtn_Google.png" alt="" class="google">
-            <img src="Images/SocialBtn_Twitter.png" alt="" class="twitter">
-        </ul>
+      <h2 class="site-footer__heading">Games</h2>
+      <ul>
+        <li><a href="games/backgammon.html">Backgammon</a></li>
+        <li><a href="games/brain-drops.html">Brain Drops</a></li>
+        <li><a href="games/bug-me-not.html">Bug Me Not</a></li>
+        <li><a href="games/v-type.html">V-Type</a></li>
+        <li><a href="games/vocabularious.html">Vocabularious</a></li>
+        <li><a href="games/word-invader.html">Word Invader</a></li>
+        <li><a href="games/poker.html">Poker</a></li>
+      </ul>
     </div>
-    <div class="Page">
-        <div class="slider-container">
-            <div class="image-container">
-                <div class="item">
-                    <img src="Images/BackGammon.png" alt="">
-                    <img class="bannerbox" src="Images/SilverBannerBox_Trailer.png" alt="">
-                    <p>A hostile foe has begun to bomb the Word Planets of 
-                        <br>
-                        the Outer Colonies, causing debris to tumble through
-                        <br>
-                        a worm hole and threaten Earth's existence.
-                        <br>
-                        <br>
-                        You have been assigned to collect the falling letters
-                        <br>
-                        and cease the bombing campaign by destroying the
-                        <br>
-                        hostile craft and taking out their leader.
-                        <br>
-                        <br>
-                        Are you ready to take on the challenge?
-                    </p>
-                    <video src="Videos/backgammon.mp4" controls></video>
-                    <button onclick="window.location.href='Pages/backgammon.html'">
-                        LEARN MORE
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="Images/Braindrop_Web1.png" alt="">
-                    <img class="bannerbox" src="Images/SilverBannerBox_Trailer.png" alt="">
-                    
-                    <p>A hostile foe has begun to bomb the Word Planets of 
-                        <br>
-                        the Outer Colonies, causing debris to tumble through
-                        <br>
-                        a worm hole and threaten Earth's existence.
-                        <br>
-                        <br>
-                        You have been assigned to collect the falling letters
-                        <br>
-                        and cease the bombing campaign by destroying the
-                        <br>
-                        hostile craft and taking out their leader.
-                        <br>
-                        <br>
-                        Are you ready to take on the challenge?
-                    </p>
-                    <video src="Videos/braindrops.mp4" controls></video>
-                    <button onclick="window.location.href='Pages/braindrops.html'">
-                        LEARN MORE
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="Images/Vtype_Web1.png" alt="">
-                    <img class="bannerbox" src="Images/SilverBannerBox_Trailer.png" alt="">
-                    
-                    <p>A hostile foe has begun to bomb the Word Planets of 
-                        <br>
-                        the Outer Colonies, causing debris to tumble through
-                        <br>
-                        a worm hole and threaten Earth's existence.
-                        <br>
-                        <br>
-                        You have been assigned to collect the falling letters
-                        <br>
-                        and cease the bombing campaign by destroying the
-                        <br>
-                        hostile craft and taking out their leader.
-                        <br>
-                        <br>
-                        Are you ready to take on the challenge?
-                    </p>
-                    <video src="Videos/V-Type.mp4" controls></video>
-                    <button onclick="window.location.href='Pages/vtype.html'">
-                        LEARN MORE
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="Images/Vocab_Web1.png" alt="">
-                    <img class="bannerbox" src="Images/SilverBannerBox_Trailer.png" alt="">
-                    
-                    <p>A hostile foe has begun to bomb the Word Planets of 
-                        <br>
-                        the Outer Colonies, causing debris to tumble through
-                        <br>
-                        a worm hole and threaten Earth's existence.
-                        <br>
-                        <br>
-                        You have been assigned to collect the falling letters
-                        <br>
-                        and cease the bombing campaign by destroying the
-                        <br>
-                        hostile craft and taking out their leader.
-                        <br>
-                        <br>
-                        Are you ready to take on the challenge?
-                    </p>
-                    <video src="Videos/vocabularious.mp4" controls></video>
-                    <button onclick="window.location.href='Pages/vocabularious.html'">
-                        LEARN MORE
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="Images/WordInvader_web1.png" alt="">
-                    <img class="bannerbox" src="Images/SilverBannerBox_Trailer.png" alt="">
-                    
-                    <p>A hostile foe has begun to bomb the Word Planets of 
-                        <br>
-                        the Outer Colonies, causing debris to tumble through
-                        <br>
-                        a worm hole and threaten Earth's existence.
-                        <br>
-                        <br>
-                        You have been assigned to collect the falling letters
-                        <br>
-                        and cease the bombing campaign by destroying the
-                        <br>
-                        hostile craft and taking out their leader.
-                        <br>
-                        <br>
-                        Are you ready to take on the challenge?
-                    </p>
-                    <video src="Videos/WordInvader.mp4" controls></video>
-                    <button onclick="window.location.href='Pages/wordinvader.html'">
-                        LEARN MORE
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="Images/BMN_Web2.png" alt="">
-                    <img class="bannerbox" src="Images/SilverBannerBox_Trailer.png" alt="">
-                    
-                    <p>A hostile foe has begun to bomb the Word Planets of 
-                        <br>
-                        the Outer Colonies, causing debris to tumble through
-                        <br>
-                        a worm hole and threaten Earth's existence.
-                        <br>
-                        <br>
-                        You have been assigned to collect the falling letters
-                        <br>
-                        and cease the bombing campaign by destroying the
-                        <br>
-                        hostile craft and taking out their leader.
-                        <br>
-                        <br>
-                        Are you ready to take on the challenge?
-                    </p>
-                    <video src="Videos/bugmenot.mp4" controls></video>
-                    <button onclick="window.location.href='Pages/bugmenot.html'">
-                        LEARN MORE
-                    </button>
-                </div>
-            </div>
-            <button class="btn previous">
-                
-            </button>
-            <button class="btn next">
-
-            </button>
-        </div>
-        <div class="button-container">
-            <img src="Images/SilverBannerBox.png" alt="">
-            <div class="buttons">
-                <button class="btnGame bg" id="1"></button>
-                <button class="btnGame bd" id="2"></button>
-                <button class="btnGame vt" id="3"></button>
-                <button class="btnGame vcab" id="4"></button>
-                <button class="btnGame wi" id="5"></button>
-                <button class="btnGame bmn" id="6"></button>
-            </div>
-        </div>
-        <div class="aliens">
-            <img src="Images/Ailens.png" alt="">
-        </div>
-        <div class="blog-container">
-            <div class="blog">
-                <div class="top">
-                    <h3>IMMORTAL UNCHAINED</h3>
-                </div>
-                <div class="feed">
-                    <div class="post">
-                        <img src="Images/header.jpg" alt="">
-                        <p>
-                            Unleashed and unforgiving. Can you rise to the challenge? Immortal: Unchained is the latest addition to the genre of ultra-hardcore action RPGs. Take the role of a living weapon, unleashed to stop the source of a cataclysmic event threatening to end all worlds.
-                        </p>
-                        <a href="#" onclick="openAgeVerifyPopup()">read on...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="introduce">
-                <h3>WE ARE WHAT WE PLAY</h3>
-                <p>We here at Game Odyssey, are gamers who make games.
-                    <br>
-                    <br>
-                    We love to unite fun-loving Earthlings through variety of free social games accross different
-                     platforms and our mission is to build exciting experience that 'Odysseans' can enjoy alone or among friends.
-                     <br>
-                     <br>
-                     If you are on Facebook, have an Android or iOS tablet or mobile, or access to a desktop computer,
-                      then we invite you to join and allow us take you on a journey.
-                </p>
-                <img src="Images/CommingSoonPreview.png" alt="">
-            </div>
-        </div>
-        <div class="popup" id="popup">
-            <h2>Are You Over 16?</h2>
-            <h5 class="desc">You must be 16 years of age or older to view page.Please verify your age to enter.</h5>
-            <div class="buttons">
-                <button onclick="enterImmortalUnchainedPage()">YES, I'M OVER 16 YEARS OLD</button>
-                <button onclick="closeAgeVerifyPopup()">NO, I'M UNDER 16 YEARS OLD</button>
-            </div>
-        </div>
-
+    
+    <div>
+      <h2 class="site-footer__heading">Legal</h2>
+      <ul>
+        <li><a href="privacy.html">Privacy policy</a></li>
+        <li><a href="terms.html">Terms of use</a></li>
+      </ul>
     </div>
-    <div class="sitemap">
-        <ul class="siteblock">
-            <ul class="main">
-                <li><a >Main</a></li>
-                <br>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Pages/games.html">Games</a></li>
-                <li><a href="Pages/contact.html">Contact</a></li>
-            </ul>
-            <ul class="games">
-                <li><a>Games</a></li>
-                <br>
-                <li><a href="Pages/backgammon.html">Backgammon</a></li>
-                <li><a href="Pages/braindrops.html">BrainDrops</a></li>
-                <li><a href="Pages/vtype.html">VType</a></li>
-                <li><a href="Pages/vocabularious.html">Vocabularious</a></li>
-                <li><a href="Pages/wordinvader.html">WordInvader</a></li>
-            </ul>
-            <ul class="social">
-                <li><a>Social</a></li>
-                <br>
-                <li><a href="https://www.facebook.com/games" target="_blank">Facebook</a></li>
-                <li><a href="https://play.google.com/store/games" target="_blank">Google+</a></li>
-                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-            </ul>
-        </ul>
-        <ul class="copyright">
-            <h4>© GameOdyssey Ltd 2010-2023</h4>
-            <h4>Privacy policy | Terms of use</h4>
-        </ul>
-    </div>
-    <script src="Js/index.js"></script>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© GameOdyssey Ltd 2010–2026</p>
+    <p><a href="privacy.html">Privacy policy</a> | <a href="terms.html">Terms of use</a></p>
+  </div>
+</footer>
+<script src="assets/js/site.js?v=mtiuc3c3" defer></script>
 </body>
 </html>

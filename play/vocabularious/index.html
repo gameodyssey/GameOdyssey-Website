@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Play Vocabularious · GameOdyssey</title>
+  <meta name="description" content="Play Vocabularious free in your browser. Seven letters, countless possibilities.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#111214">
+  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../../assets/css/play.css?v=mtiuc3c3">
+</head>
+<body>
+  <header class="play-bar">
+    <a class="play-bar__back" href="../../games/vocabularious.html">&larr; Back to GameOdyssey</a>
+    <span class="play-bar__title">Vocabularious</span>
+    <button type="button" class="play-bar__btn" id="unity-fullscreen-button" disabled>Fullscreen</button>
+  </header>
+
+  <main class="play-stage">
+    <div id="unity-container" class="unity-desktop" style="--w:1024;--h:768">
+      <canvas id="unity-canvas" width="1024" height="768" tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <img class="loading-logo" src="../../assets/img/games/vocabularious/icon.png" alt="" width="96" height="96">
+        <p class="loading-text">Loading Vocabularious…</p>
+        <div id="unity-progress-bar-empty"><div id="unity-progress-bar-full"></div></div>
+        <p class="loading-hint">First load downloads the game (a few tens of MB) — it's cached after that.</p>
+      </div>
+      <div id="unity-warning"></div>
+    </div>
+    <p class="play-note">Best played on a desktop or laptop with a keyboard. Click the game once so it can receive key presses.</p>
+  </main>
+
+  <script>
+    var container = document.querySelector("#unity-container");
+    var canvas = document.querySelector("#unity-canvas");
+    var loadingBar = document.querySelector("#unity-loading-bar");
+    var progressBarFull = document.querySelector("#unity-progress-bar-full");
+    var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+    var warningBanner = document.querySelector("#unity-warning");
+
+    function unityShowBanner(msg, type) {
+      function updateBannerVisibility() {
+        warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+      }
+      var div = document.createElement('div');
+      div.innerHTML = msg;
+      warningBanner.appendChild(div);
+      if (type == 'error') div.className = 'is-error';
+      else {
+        if (type == 'warning') div.className = 'is-warning';
+        setTimeout(function() {
+          warningBanner.removeChild(div);
+          updateBannerVisibility();
+        }, 5000);
+      }
+      updateBannerVisibility();
+    }
+
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/Vocabularious.loader.js";
+    var config = {
+      dataUrl: buildUrl + "/Vocabularious.data",
+      frameworkUrl: buildUrl + "/Vocabularious.framework.js",
+      codeUrl: buildUrl + "/Vocabularious.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "GameOdyssey Ltd",
+      productName: "Vocabularious",
+      productVersion: "1.0",
+      showBanner: unityShowBanner,
+    };
+
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      // Mobile: fill the whole client area with the canvas.
+      container.className = "unity-mobile";
+      canvas.className = "unity-mobile";
+      document.body.classList.add("is-mobile");
+      // Lower the render resolution a little on phones for smoother play.
+      config.devicePixelRatio = 1;
+    }
+
+    loadingBar.style.display = "flex";
+
+    var script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = function () {
+      createUnityInstance(canvas, config, function (progress) {
+        progressBarFull.style.width = 100 * progress + "%";
+      }).then(function (unityInstance) {
+        loadingBar.style.display = "none";
+        fullscreenButton.disabled = false;
+        fullscreenButton.onclick = function () { unityInstance.SetFullscreen(1); };
+        canvas.focus();
+      }).catch(function (message) {
+        unityShowBanner(message, 'error');
+      });
+    };
+    script.onerror = function () {
+      unityShowBanner("The game files could not be loaded. Please try again later.", 'error');
+    };
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>
