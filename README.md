@@ -41,12 +41,17 @@ To add a screenshot to a game, drop `NN.jpg` (≤1200px wide) and `NN-thumb.jpg`
 
 ## Word Invader (HTML5 remake)
 
-`play/wordinvader/` is the new HTML5 build of Word Invader (a Vite bundle with
-its own `index.html`), so the generator does **not** write a wrapper for it;
-`site.json` points at it with `"play": { "dir": "wordinvader" }` and
-`"unity": null`. Drop new builds straight into that folder. The original
-Unity build is kept in `play/wordinvader-pham/` (with the generated wrapper)
-but nothing links to it.
+`play/wordinvader/` is the new HTML5 build of Word Invader (Phaser, bundled by
+Vite; native size 1374×990, `scale.mode: FIT`). `site.json` points at it with
+`"play": { "dir": "wordinvader", "html5": true, "width": 1374, "height": 990 }`
+and `"unity": null`. The generator replaces Vite's bare `index.html` with the
+site wrapper (GO bar, fullscreen button, a stage locked to the game's aspect
+ratio) and finds the hashed `assets/index-*.js` bundle on disk.
+
+To ship a new game build: copy the Vite `dist/` contents into `play/wordinvader/`
+(delete the old `assets/index-*.js` first so only one bundle remains), then run
+`node tools/build.mjs` to regenerate the wrapper. The original Unity build is
+kept in `play/wordinvader-pham/` but nothing links to it.
 
 ## Bob
 

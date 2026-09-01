@@ -53,7 +53,10 @@
       },
       "play": {
         "dir": "wordinvader",
-        "note": "HTML5 remake (Vite build); the original Unity build is kept in play/wordinvader-pham/"
+        "html5": true,
+        "width": 1374,
+        "height": 990,
+        "note": "Phaser/Vite build (scale FIT, native 1374x990). build.mjs wraps its assets/index-*.js; the original Unity build is kept in play/wordinvader-pham/"
       }
     },
     {

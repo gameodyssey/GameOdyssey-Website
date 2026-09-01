@@ -12,7 +12,7 @@
  * No dependencies. The output is plain HTML that deploys to any static or
  * PHP host (Hostinger shared hosting included).
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -584,6 +584,79 @@ function playPage(g) {
 }
 
 // ---------------------------------------------------------------------------
+// HTML5 (Phaser / Vite) wrapper
+// ---------------------------------------------------------------------------
+//
+// Vite emits play/<dir>/index.html plus a hashed assets/index-<hash>.js (and
+// sometimes a matching .css). We replace that index.html with the site's
+// wrapper (GO bar, sized stage) and pull the hashed bundle names from disk, so
+// dropping in a fresh game build and re-running this script is all it takes.
+
+function html5Page(g) {
+  const rel = "../../";
+  const dir = playDir(g);
+  const assetsDir = join(ROOT, "play", dir, "assets");
+  let scripts = [];
+  let styles = [];
+  if (existsSync(assetsDir)) {
+    const files = readdirSync(assetsDir);
+    scripts = files.filter((f) => /^index-[\w-]+\.js$/.test(f)).sort();
+    styles = files.filter((f) => /^index-[\w-]+\.css$/.test(f)).sort();
+  }
+  if (scripts.length === 0) console.warn(`!! play/${dir}/assets has no index-*.js bundle`);
+  if (scripts.length > 1) console.warn(`!! play/${dir}/assets has ${scripts.length} index-*.js bundles; using ${scripts[scripts.length - 1]}. Delete the stale ones.`);
+  const script = scripts[scripts.length - 1];
+  const w = (g.play && g.play.width) || 1374;
+  const h = (g.play && g.play.height) || 990;
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Play ${esc(g.name)} · ${esc(site.name)}</title>
+  <meta name="description" content="Play ${esc(g.name)} free in your browser. ${esc(g.oneLiner)}">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#111214">
+  <link rel="icon" href="${rel}favicon.ico" sizes="any">
+  <link rel="stylesheet" href="${rel}assets/css/play.css?v=${BUILD_ID}">${styles
+    .map((c) => `\n  <link rel="stylesheet" href="./assets/${c}">`)
+    .join("")}${script ? `\n  <script type="module" crossorigin src="./assets/${script}"></script>` : ""}
+</head>
+<body>
+  <header class="play-bar">
+    <a class="play-bar__back" href="${rel}games/${g.slug}.html">&larr; Back to ${esc(site.name)}</a>
+    <span class="play-bar__title">${esc(g.name)}</span>
+    <button type="button" class="play-bar__btn" id="html5-fullscreen-button">Fullscreen</button>
+  </header>
+
+  <main class="play-stage">
+    <div id="game" class="html5-game" style="--w:${w};--h:${h}"></div>
+    <p class="play-note">Best played on a desktop or laptop with a keyboard. Click the game once so it can receive key presses.</p>
+  </main>
+
+  <script>
+    (function () {
+      var stage = document.getElementById("game");
+      var btn = document.getElementById("html5-fullscreen-button");
+      if (!stage.requestFullscreen) { btn.hidden = true; return; }
+      btn.addEventListener("click", function () {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else stage.requestFullscreen();
+      });
+      document.addEventListener("fullscreenchange", function () {
+        btn.textContent = document.fullscreenElement ? "Exit fullscreen" : "Fullscreen";
+        // Phaser's FIT scaler re-measures its parent on window resize.
+        window.dispatchEvent(new Event("resize"));
+      });
+    })();
+  </script>
+</body>
+</html>
+`;
+}
+
+// ---------------------------------------------------------------------------
 // Contact / legal / 404
 // ---------------------------------------------------------------------------
 
@@ -727,6 +800,8 @@ for (const g of games) {
       console.warn(`!! play/${playDir(g)}/Build is missing; wrapper written anyway`);
     }
     write(`play/${playDir(g)}/index.html`, playPage(g));
+  } else if (g.playable && g.play && g.play.html5) {
+    write(`play/${playDir(g)}/index.html`, html5Page(g));
   } else if (g.playable && !existsSync(join(ROOT, "play", playDir(g), "index.html"))) {
     console.warn(`!! play/${playDir(g)}/index.html is missing; "Play now" for ${g.name} will 404`);
   }

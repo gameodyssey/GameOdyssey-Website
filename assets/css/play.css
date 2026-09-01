@@ -47,6 +47,19 @@ body {
 #unity-canvas { width: 100%; height: 100%; display: block; background: #231f20; outline: 0; }
 
 #unity-container.unity-mobile { position: fixed; inset: 0; width: 100%; height: 100%; border-radius: 0; }
+
+/* HTML5 (Phaser) builds: the stage is locked to the game's native aspect
+   ratio (--w / --h) and sized to the available space, capped at native size so
+   the pixel art stays sharp. Phaser's FIT scaler then fills it exactly. */
+.html5-game {
+  position: relative;
+  width: min(100%, calc(var(--w) * 1px), calc((100vh - 52px - 5rem) * var(--w) / var(--h)));
+  aspect-ratio: var(--w) / var(--h);
+  background: #06090f; border-radius: 6px; overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+.html5-game canvas { display: block; margin: 0 auto; }
+.html5-game:fullscreen { width: 100%; height: 100%; border-radius: 0; background: #06090f; }
 .is-mobile .play-note, .is-mobile .play-bar { display: none; }
 
 #unity-loading-bar {
