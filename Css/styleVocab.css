@@ -1,0 +1,336 @@
+body{
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    position: fixed;
+    background-image: url(../Images/NavBg.png);
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 26px;
+    align-items: end;
+    z-index: 1;
+}
+
+.navbar .logo{
+    cursor: pointer;
+}
+
+.MenuBtns{
+    display: flex;
+    list-style-type: none;
+    margin-right: 48px;
+    margin-bottom: 7px;
+    gap: 1px;
+}
+
+.MenuBtns li a{
+    text-decoration: none;
+    color: white;
+    background-image: url(../Images/MenuBtn_Up.png);
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-family: ArialRoundedMTBold;
+    font-size: 14px;
+}
+
+.MenuBtns li a:hover{
+    background-image: url(../Images/MenuBtn_Over.png);
+}
+
+.MenuBtns li a:active{
+    background-image: url(../Images/MenuBtn_Down.png);
+    color: gray;
+}
+
+.SocialBtns{
+    display: flex;
+    position: fixed;
+    justify-content: right;
+    gap: 2px;
+    width: 100%;
+    margin-top: 5px;
+    margin-left: -70px;
+    z-index: 2;
+}
+
+.SocialBtns img{
+    cursor: pointer;
+}
+
+.SocialBtns .fb:hover{
+    content: url(../Images/SocialBtn_FB_H.png);
+}
+
+.SocialBtns .google:hover{
+    content: url(../Images/SocialBtn_Google_H.png);
+}
+
+.SocialBtns .twitter:hover{
+    content: url(../Images/SocialBtn_Twitter_H.png);
+}
+
+.Page{
+    margin: 0;
+    background-color: white;
+    width: 100vw;
+    height: 1755px;
+}
+
+.PageBot .bg{
+    display: flex;
+    justify-content: center;
+}
+
+.PageBot .storebtns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position:absolute;
+    top:1810px;
+    left:50%;
+    transform: translate(-50%,0%);
+}
+
+.sitemap{
+    background-image: url(../Images/SiteMapBg.png);
+    width: 100vw;
+    height: 254px;
+}
+
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 110px;
+}
+
+.copyright h4{
+    color: #939598;
+    margin-top: 70px;
+    font-family: ArialRoundedMTBold;
+}
+
+.siteblock{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+}
+.siteblock ul li{
+    list-style-type: none;
+}
+.siteblock ul li a{
+    text-decoration: none;
+    color: #939598;
+    font-family: ArialRoundedMTBold;
+}
+
+.Page h4{
+    margin: 0;
+    color:#939598;
+    padding-top: 205px;
+    padding-left: 48px;
+    font-family: ArialRoundedMTBold;
+    opacity: .7;
+}
+
+.Page .gamecontainer{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-left: 34px;
+    gap: 1px;
+}
+
+.Page .gamecontainer .game{
+    width: 248px;
+    height: 338px;
+    background-image: url(../Images/SilverbannerBox_Games.png);
+}
+
+.Page .gamecontainer .game h4{
+    padding-left: 60px;
+    padding-top: 12px;
+    opacity: 1;
+    font-size: 13px;
+}
+
+.Page .gamecontainer .game img{
+    padding-left: 24px;
+    padding-top: 10px;
+
+}
+.Page .gamecontainer .game button{
+    background: url(../Images/Medium_up.png);
+    border: none;
+    width: 120px;
+    height: 25px;
+    font-family: ArialRoundedMTBold;
+    color:white;
+    font-size: 12px;
+    margin-left: 60px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.Page .gamecontainer .game button:hover{
+    background: url(../Images/Medium_over.png);
+}
+
+.Page .PageBody .bg{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.Page .PageBody .container .feature{
+    margin: 0;
+    position: relative;
+}
+.Page .PageBody .container .feature .videobg{
+    width: 413px;
+    height: 310px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(10%,-50%);
+}
+
+.Page .PageBody .container .feature .videobd{
+    width: 465px;
+    height: 310px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.Page .PageBody .container .feature .videovocab{
+    width: 413px;
+    height: 310px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(15%,-50%);
+}
+
+.Page .PageBody .container .feature .videovt{
+    width: 413px;
+    height: 310px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(15%,-50%);
+}
+
+.bgTrailerBtn{
+    background: url(../Images/BG_Play.png);
+    border: none;
+    width: 78px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    left:20%;
+    top:40%;
+}
+
+.bdTrailerBtn{
+    background: url(../Images/BD_Play.png);
+    border: none;
+    width: 78px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    left:20%;
+    top:40%;
+}
+
+.vocabTrailerBtn{
+    background: url(../Images/Vocab_Play.png);
+    border: none;
+    width: 78px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    left:23%;
+    top:40%;
+}
+
+.vtTrailerBtn{
+    background: url(../Images/VType_Play.png);
+    border: none;
+    width: 78px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    left:23%;
+    top:40%;
+}
+
+.Page .PageBody .container{
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+}
+
+.Page .PageBody .container img{
+    transform: translate(-50%,0%);
+}
+.Page .PageBody .container .storebtns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transform: translate(-50%,0%);
+    position: absolute;
+    top:420px;
+}
+
+.applestore{
+    margin: 0;
+    background: url(../Images/ApplstoreBtn.png);
+    border: none;
+    width: 160px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.facebookstore{
+    margin: 0;
+    background: url(../Images/FBStoreBtn.png);
+    border: none;
+    width: 160px;
+    height: 55px;
+    cursor: pointer;
+
+}
+
+.googlestore{
+    margin: 0;
+    background: url(../Images/GoogleStoreBtn.png);
+    border: none;
+    width: 160px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.googlestore:hover{
+    background: url(../Images/GoogleStoreBtn_H.png);
+}
+
+.facebookstore:hover{
+    background: url(../Images/FBStoreBtn_H.png);
+}
+
+.applestore:hover{
+    background: url(../Images/ApplstoreBtn_H.png);
+}
+

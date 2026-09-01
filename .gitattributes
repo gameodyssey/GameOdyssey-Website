@@ -1,0 +1,49 @@
+# Normalise line endings: text files are stored as LF in the repo and
+# checked out using the platform default (core.autocrlf on Windows).
+* text=auto
+
+# Source / markup: always LF in the working tree too, so diffs stay clean
+# across macOS and Windows.
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+.htaccess text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Binary assets: never normalise or diff as text.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.svg   text eol=lf
+*.mp4   binary
+*.webm  binary
+*.ttf   binary
+*.otf   binary
+*.woff  binary
+*.woff2 binary
+
+# Unity WebGL build output
+*.wasm  binary
+*.data  binary
+*.unityweb binary
+Games/**/Build/*.js  binary -diff
+gogammon/Build/*.js  binary -diff
+
+# ---------------------------------------------------------------------------
+# Optional: Git LFS for the large game builds and trailers (~430 MB total).
+# GitHub warns above 50 MB per file and hard-rejects above 100 MB; the Unity
+# builds here are 14-44 MB each, so LFS is not mandatory yet, but it keeps
+# clones fast. To enable: run `git lfs install` once, then uncomment.
+# (Do this BEFORE the first commit, or the files will need migrating.)
+# ---------------------------------------------------------------------------
+#*.wasm     filter=lfs diff=lfs merge=lfs -text
+#*.data     filter=lfs diff=lfs merge=lfs -text
+#*.unityweb filter=lfs diff=lfs merge=lfs -text
+#*.mp4      filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,776 @@
+body{
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    position: fixed;
+    background-image: url(../Images/NavBg.png);
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 26px;
+    align-items: end;
+    z-index: 1;
+}
+
+.navbar .logo{
+    cursor: pointer;
+}
+
+.MenuBtns{
+    display: flex;
+    list-style-type: none;
+    margin-right: 48px;
+    margin-bottom: 7px;
+    gap: 1px;
+}
+
+.MenuBtns li a{
+    text-decoration: none;
+    color: white;
+    background-image: url(../Images/MenuBtn_Up.png);
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-family: ArialRoundedMTBold;
+    font-size: 14px;
+}
+
+.MenuBtns li a:hover{
+    background-image: url(../Images/MenuBtn_Over.png);
+}
+
+.MenuBtns li a:active{
+    background-image: url(../Images/MenuBtn_Down.png);
+    color: gray;
+}
+
+.SocialBtns{
+    display: flex;
+    position: fixed;
+    justify-content: right;
+    gap: 2px;
+    width: 100%;
+    margin-top: 5px;
+    margin-left: -70px;
+    z-index: 2;
+}
+.SocialBtns img{
+    cursor: pointer;
+}
+
+.SocialBtns .fb:hover{
+    content: url(../Images/SocialBtn_FB_H.png);
+}
+
+.SocialBtns .google:hover{
+    content: url(../Images/SocialBtn_Google_H.png);
+}
+
+.SocialBtns .twitter:hover{
+    content: url(../Images/SocialBtn_Twitter_H.png);
+}
+
+.Page{
+    margin: 0;
+    background-color: white;
+    width: 100vw;
+    height: 1755px;
+}
+.Page .slider-container{
+    width: 1920px;
+    height: 600px;
+    overflow: hidden;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.Page .slider-container .btn{
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.5;
+}
+
+.Page .slider-container .btn:hover{
+    opacity: 1;
+}
+
+.Page .slider-container .btn.previous{
+    background: url(../Images/PreviousBtn.png);
+    left:25%;
+}
+
+.Page .slider-container .btn.next{
+    background: url(../Images/NextBtn.png);
+    left:75%;
+}
+
+
+
+.Page .slider-container .image-container{
+    display: flex;
+    transition: transform .4s ease-in-out;
+}
+
+.Page .slider-container .image-container .item{
+    background-size: cover;
+    display: flex;
+    justify-content:flex-start;
+}
+
+.Page .slider-container .image-container .item button{
+    background: url(../Images/Medium_up.png);
+    border: none;
+    width: 120px;
+    height: 25px;
+    font-family: ArialRoundedMTBold;
+    color:white;
+    font-size: 12px;
+    cursor: pointer;
+
+    position: absolute;
+    margin-top: 480px;
+    margin-left: 61.6%;
+}
+
+.Page .slider-container .image-container .item button:hover{
+    background: url(../Images/Medium_over.png);
+}
+
+.Page .slider-container .image-container .bannerbox{
+    align-self:center;
+    position: absolute;
+    padding-top: 60px;
+    padding-left: 55%;
+}
+
+.Page .slider-container .image-container video{
+    
+    position: absolute;
+    padding-top: 135px;
+    padding-left: 56%;
+    width: 340px;
+    height: 180px;
+}
+
+.Page .slider-container .image-container p{
+    font-family: ArialRoundedMTBold;
+    color: gray;
+    font-size: 12px;
+    position: absolute;
+    padding-top: 315px;
+    padding-left: 56.5%;
+    width: 340px;
+    height: 180px;
+}
+
+.Page .button-container{
+    width: 1920px;
+    height: 70px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.Page .button-container .buttons{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    gap: 20px;
+}
+
+.Page .button-container .buttons .btnGame{
+    width: 50px;
+    height: 50px;
+    border: none;
+    align-self: center;
+    cursor: pointer;
+    opacity: .5;
+}
+.Page .button-container .buttons button:hover{
+    opacity: 1;
+}
+
+.Page .button-container .buttons button:active{
+    transform: scale(.9);
+}
+
+.Page .button-container .buttons button.bg{
+    background-image: url(../Images/BackgammonIcon.png);
+    opacity: 1;
+}
+
+.Page .button-container .buttons button.bd{
+    background-image: url(../Images/BrainDropIcon.png);
+}
+
+.Page .button-container .buttons button.vt{
+    background-image: url(../Images/VtypeIcon.png);
+}
+
+.Page .button-container .buttons button.vcab{
+    background-image: url(../Images/VocabulariousIcon.png);
+}
+
+.Page .button-container .buttons button.wi{
+    background-image: url(../Images/WordInvaderIcon.png);
+}
+
+.Page .button-container .buttons button.bmn{
+    background-image: url(../Images/BMNIcon.png);
+}
+
+.PageBot{
+    margin: 0;
+    width: 100vw;
+}
+
+.PageBot .bg{
+    display: flex;
+    justify-content: center;
+}
+
+.PageBot .storebtns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position:absolute;
+    top:1810px;
+    left:50%;
+    transform: translate(-50%,0%);
+}
+
+.sitemap{
+    margin: 0;
+    background-image: url(../Images/SiteMapBg.png);
+    width: 100vw;
+    height: 254px;
+}
+
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 110px;
+}
+
+.copyright h4{
+    color: #939598;
+    margin-top: 70px;
+    font-family: ArialRoundedMTBold;
+}
+
+.siteblock{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+}
+.siteblock ul li{
+    list-style-type: none;
+}
+.siteblock ul li a{
+    text-decoration: none;
+    color: #939598;
+    font-family: ArialRoundedMTBold;
+}
+
+.Page h4{
+    margin: 0;
+    color:#939598;
+    padding-top: 205px;
+    padding-left: 48px;
+    font-family: ArialRoundedMTBold;
+    opacity: .7;
+}
+
+.Page .gamecontainer{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-left: 34px;
+    gap: 1px;
+}
+
+.Page .gamecontainer .game{
+    width: 248px;
+    height: 338px;
+    background-image: url(../Images/SilverbannerBox_Games.png);
+}
+
+.Page .gamecontainer .game h4{
+    padding-left: 0px;
+    padding-top: 12px;
+    opacity: 1;
+    font-size: 13px;
+    text-align:center;
+}
+
+.Page .gamecontainer .game img{
+    padding-left: 24px;
+    padding-top: 10px;
+
+}
+.Page .gamecontainer .game button{
+    background: url(../Images/Medium_up.png);
+    border: none;
+    width: 120px;
+    height: 25px;
+    font-family: ArialRoundedMTBold;
+    color:white;
+    font-size: 12px;
+    margin-left: 60px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.Page .gamecontainer .game button:hover{
+    background: url(../Images/Medium_over.png);
+}
+
+.Page .PageBody .bg{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.Page .PageBody .container .feature{
+    margin: 0;
+    position: relative;
+}
+.Page .PageBody .container .feature .videobg{
+    width: 413px;
+    height: 310px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(10%,-50%);
+}
+
+.Page .PageBody .container .feature .videobd{
+    width: 465px;
+    height: 310px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.Page .PageBody .container .feature .videovocab{
+    width: 413px;
+    height: 310px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(15%,-50%);
+}
+
+.Page .PageBody .container .feature .videovt{
+    width: 413px;
+    height: 310px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(15%,-50%);
+}
+
+.Page .PageBody .container .feature .videowi{
+    width: 413px;
+    height: 310px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(15%,-50%);
+}
+
+.Page .PageBody .container .feature .videobmn{
+    width: 465px;
+    height: 310px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0,-60%);
+}
+
+
+.bgTrailerBtn{
+    background: url(../Images/BG_Play.png);
+    border: none;
+    width: 78px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    left:20%;
+    top:40%;
+}
+
+.bdTrailerBtn{
+    background: url(../Images/BD_Play.png);
+    border: none;
+    width: 78px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    left:20%;
+    top:40%;
+}
+
+.bmnTrailerBtn{
+    background: url(../Images/BMN_Play.png);
+    border: none;
+    width: 78px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    left:18%;
+    top:35%;
+}
+
+.vocabTrailerBtn{
+    background: url(../Images/Vocab_Play.png);
+    border: none;
+    width: 78px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    left:23%;
+    top:40%;
+}
+
+.vtTrailerBtn{
+    background: url(../Images/VType_Play.png);
+    border: none;
+    width: 78px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    left:23%;
+    top:40%;
+}
+
+.wiTrailerBtn{
+    background: url(../Images/WI_Play.png);
+    border: none;
+    width: 78px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    left:23%;
+    top:40%;
+}
+
+.Page .PageBody .container{
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+}
+
+.Page .PageBody .container img{
+    transform: translate(-50%,0%);
+}
+.Page .PageBody .container .storebtns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transform: translate(-50%,0%);
+}
+
+.Page .PageBody .container .storebtnsBMN{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 300px;
+    transform: translate(-50%,0%);
+}
+
+
+.applestore{
+    margin: 0;
+    background: url(../Images/ApplstoreBtn.png);
+    border: none;
+    width: 160px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.facebookstore{
+    margin: 0;
+    background: url(../Images/FBStoreBtn.png);
+    border: none;
+    width: 160px;
+    height: 55px;
+    cursor: pointer;
+
+}
+
+.googlestore{
+    margin: 0;
+    background: url(../Images/GoogleStoreBtn.png);
+    border: none;
+    width: 160px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.googlestore:hover{
+    background: url(../Images/GoogleStoreBtn_H.png);
+}
+
+.facebookstore:hover{
+    background: url(../Images/FBStoreBtn_H.png);
+}
+
+.applestore:hover{
+    background: url(../Images/ApplstoreBtn_H.png);
+}
+
+.blog-container{
+    margin: 0;
+    width: 1024px;
+    height: 900px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px
+    
+}
+
+.introduce{
+    background-image: url(../Images/SilverBannerBox_1.png);
+    width: 512px;
+    height: 738px;
+    font-family: ArialRoundedMTBold;
+    color: grey;
+    margin-top: 5px;
+}
+
+.introduce h3{
+    padding-left: 20px;
+}
+
+.introduce p{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.introduce img{
+    position: absolute;
+    padding-left: 20px;
+    padding-top: 60px;
+}
+.blog-container .blog{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 482px;
+    height: 738px;
+    font-family: ArialRoundedMTBold;
+    color: grey;
+}
+.blog-container .blog .top{
+    background-image: url(../Images/BackBox.png);
+    width: 482px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.blog-container .blog .top h3{
+    align-self: center;
+    padding-left: 20px;
+}
+.blog-container .blog .top img{
+    align-self: center;
+    padding-right: 15px;
+}
+
+.feed{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../Images/BackBox2.png);
+    background-size: 100% 100%;
+    margin-bottom: 10px;
+}
+
+
+.feed .post {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.feed .post img{
+    padding-top: 15px;
+    padding-right: 20px;
+}
+
+.feed .post h3{
+    color: #14A4CF;
+}
+
+.feed .post h4{
+    padding-top: 0px;
+    padding-left: 0px;
+    color: #14A4CF;
+    opacity: 1;
+}
+
+.feed .post p{
+    padding-right: 15px;
+}
+.feed .post a{
+    padding-left: 360px;
+    text-decoration: none;
+    color: #14A4CF;
+}
+
+.blog .moreposts a{
+    padding-left: 20px;
+    text-decoration: none;
+    color: #14A4CF;
+    margin-top: 20px;
+    opacity: 1;
+}
+
+.popup{
+    width: 500px;
+    background-image: url(../Images/BackBox2.png);
+    background-size: cover;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    font-family: ArialRoundedMTBold;
+    text-align: center;
+    color: grey;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup .buttons button{
+    background: url(../Images/Medium_up.png);
+    background-size: cover;
+    border: none;
+    width: 200px;
+    height: 30px;
+    font-family: ArialRoundedMTBold;
+    color:white;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 5%;
+    margin-inline: 3px;
+}
+
+.popup .buttons button:hover{
+    background: url(../Images/Medium_over.png);
+    background-size: cover;
+}
+
+.popup .desc{
+    opacity: 60%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.aliens{
+    position: absolute;
+    padding-top: 800px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.contact-container{
+    width: 700px;
+    height: 730px;
+    position: absolute;
+    /* background-color:azure; */
+    margin-left: 50px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    font-family: ArialRoundedMTBold;
+    color: grey;
+    gap:20px
+}
+
+
+.contact-container .field{
+    width: 465px;
+    height: 50px;
+    align-self: flex-start;
+    border-width: 2px;
+    border-color: grey;
+    opacity: .5;
+    font-family: ArialRoundedMTBold;
+    color: grey;
+}
+
+.field.usr{
+    background: white url(../Images/userIcon.png) left no-repeat;
+    background-position-x: 10px;
+    padding-left: 35px;
+}
+
+.field.email{
+    background: white url(../Images/emailIcon.png) left no-repeat;
+    background-position-x: 10px;
+    padding-left: 35px;
+}
+
+.field.subject{
+    padding-left: 35px;
+}
+
+.messageArea{
+    width: 660px;
+    align-self: flex-start;
+    border-width: 2px;
+    border-color: grey;
+    opacity: .5;
+    font-family: ArialRoundedMTBold;
+    color: grey;
+    padding-left: 35px;
+    padding-top: 20px;
+}
+
+.contact-container .sendBtn{
+    cursor: pointer;
+    width: 120px;
+    height: 25px;
+    border: none;
+    font-family: ArialRoundedMTBold;
+    color: white;
+    background-image: url(../Images/MenuBtn_Up.png) ;
+    background-size: cover;
+    align-self: flex-end;
+}
+
+.contact-container .sendBtn:hover{
+    background-image: url(../Images/MenuBtn_Over.png) ;
+}
+
+.contact-container .sendBtn:active{
+    background-image: url(../Images/MenuBtn_Down.png) ;
+}
