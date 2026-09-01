@@ -6,8 +6,8 @@
  *
  * Reads tools/site.json and writes:
  *   index.html, games.html, contact.html, privacy.html, terms.html, 404.html
- *   games/<slug>.html            – one product page per game
- *   play/<slug>/index.html       – Unity WebGL wrapper (playable games only)
+ *   games/<slug>.html            - one product page per game
+ *   play/<slug>/index.html       - Unity WebGL wrapper (playable games only)
  *
  * No dependencies. The output is plain HTML that deploys to any static or
  * PHP host (Hostinger shared hosting included).
@@ -72,7 +72,7 @@ function header(rel, active) {
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand" href="${rel}index.html" aria-label="${esc(site.name)} home">
-      <img src="${rel}assets/img/site/logo.png" alt="${esc(site.name)} — ${esc(site.tagline)}" width="250" height="71">
+      <img src="${rel}assets/img/site/logo.png" alt="${esc(site.name)}: ${esc(site.tagline)}" width="250" height="71">
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -134,7 +134,7 @@ function footer(rel) {
     </div>
   </div>
   <div class="container site-footer__bottom">
-    <p>© ${esc(site.company)} ${site.foundedYear}–${YEAR}</p>
+    <p>© ${esc(site.company)} ${site.foundedYear}-${YEAR}</p>
     <p><a href="${rel}privacy.html">Privacy policy</a> | <a href="${rel}terms.html">Terms of use</a></p>
   </div>
 </footer>
@@ -158,9 +158,15 @@ const ICON = {
 // Reusable blocks
 // ---------------------------------------------------------------------------
 
+// Folder under play/ that holds the playable build. Defaults to the slug; a
+// game can point elsewhere with "play": { "dir": "..." }. Used when a build
+// ships its own index.html (e.g. the HTML5 Word Invader), in which case no
+// Unity wrapper is generated for it.
+const playDir = (g) => (g.play && g.play.dir) || g.slug;
+
 function playButtons(g, rel, { primaryClass = "btn btn--primary", secondary = true } = {}) {
   const play = g.playable
-    ? `<a class="${primaryClass}" href="${rel}play/${g.slug}/">${ICON.play} Play now</a>`
+    ? `<a class="${primaryClass}" href="${rel}play/${playDir(g)}/">${ICON.play} Play now</a>`
     : `<span class="${primaryClass} is-disabled" aria-disabled="true">${esc(g.status || "Unavailable")}</span>`;
   const learn = secondary ? `<a class="btn btn--ghost" href="${rel}games/${g.slug}.html">Learn more</a>` : "";
   return `${play}${learn}`;
@@ -191,7 +197,7 @@ function gamesGrid(rel, { exclude } = {}) {
 </div>`;
 }
 
-// Bob — the GO alien — strolls back and forth across the strip, as he did on
+// Bob, the GO alien, strolls back and forth across the strip, as he did on
 // the 2014 site. Each walker: direction, scale, crossing time, walk-cycle
 // speed, start delay, and how far up from the baseline he walks (depth).
 const BOBS = [
@@ -206,12 +212,43 @@ function aliensStrip(rel) {
     (b) =>
       `<div class="bob-runner bob-runner--${b.dir}" style="--s:${b.s};--cross:${b.cross}s;--step:${b.step}s;--delay:${b.delay}s;--bottom:${b.bottom}px"><div class="bob"></div></div>`
   ).join("\n    ");
-  return `<div class="aliens" aria-hidden="true">
-  <img src="${rel}assets/img/site/aliens.png" alt="" width="1600" height="262" loading="lazy">
+  return `<div class="bob-strip" aria-hidden="true">
   <div class="bob-stage">
     ${bobs}
   </div>
 </div>`;
+}
+
+// Featured third-party title (currently Immortal Unchained) with an age check
+// before following the external link. Configured in site.json → site.featured.
+function featuredSection(rel) {
+  const f = site.featured;
+  if (!f) return "";
+  return `<section class="section section--tint" id="featured">
+    <div class="container">
+      <article class="featured">
+        <a class="featured__media" href="${esc(f.url)}" data-age-gate="${f.minAge || 0}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="${rel}${f.image}" alt="" width="920" height="430" loading="lazy">
+        </a>
+        <div class="featured__body">
+          <p class="featured__kicker">Featured</p>
+          <h2 class="section__title">${esc(f.title)}</h2>
+          <p>${esc(f.text)}</p>
+          <a class="btn btn--primary" href="${esc(f.url)}" data-age-gate="${f.minAge || 0}" target="_blank" rel="noopener">${esc(f.linkText || "Read on")}</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <dialog class="age-gate" id="age-gate" aria-labelledby="age-gate-title">
+    <form method="dialog" class="age-gate__inner">
+      <h2 id="age-gate-title">Are you over ${f.minAge || 16}?</h2>
+      <p>You must be ${f.minAge || 16} years of age or older to view this page. Please confirm your age to continue.</p>
+      <div class="age-gate__actions">
+        <button type="submit" class="btn btn--primary" value="yes">Yes, I'm ${f.minAge || 16} or over</button>
+        <button type="submit" class="btn btn--ghost" value="no">No, I'm under ${f.minAge || 16}</button>
+      </div>
+    </form>
+  </dialog>`;
 }
 
 // ---------------------------------------------------------------------------
@@ -230,7 +267,7 @@ function homePage() {
       }>
         <div class="slide__art">
           <img src="${rel}assets/img/games/${g.slug}/banner.jpg" srcset="${rel}assets/img/games/${g.slug}/banner-960.jpg 960w, ${rel}assets/img/games/${g.slug}/banner.jpg 1920w" sizes="100vw" alt="" width="1920" height="600"${
-            i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'
+            i === 0 ? ' fetchpriority="high"' : ' fetchpriority="low"'
           }>
           ${exhaust}
         </div>
@@ -256,7 +293,7 @@ function homePage() {
   return `${head({
     rel,
     title: "",
-    description: "Free browser games from Game Odyssey: Backgammon, Brain Drops, Bug Me Not, V-Type, Vocabularious and Word Invader. No download, no sign-up — just play.",
+    description: "Free browser games from GameOdyssey: Backgammon, Brain Drops, Bug Me Not, V-Type, Vocabularious and Word Invader. No download and no sign-up, just play.",
     image: "assets/img/games/word-invader/banner.jpg",
   })}
 <body class="page-home">
@@ -280,13 +317,15 @@ ${header(rel, "home")}
     <div class="container">
       <div class="section__head">
         <h2 class="section__title">Our games</h2>
-        <p class="section__lead">Six classics, playable right here in your browser. Desktop with a keyboard recommended.</p>
+        <p class="section__lead">Our classic games, playable right here in your browser. Desktop with a keyboard recommended.</p>
       </div>
       ${gamesGrid(rel)}
     </div>
   </section>
 
-  <section class="section section--tint" id="about">
+  ${featuredSection(rel)}
+
+  <section class="section" id="about">
     <div class="container about">
       <div class="about__text">
         <h2 class="section__title">We are what we play</h2>
@@ -313,7 +352,7 @@ function gamesPage() {
   return `${head({
     rel,
     title: "Games",
-    description: "All Game Odyssey games: Backgammon, Brain Drops, Bug Me Not, V-Type, Vocabularious, Word Invader and Poker.",
+    description: "All GameOdyssey games: Backgammon, Brain Drops, Bug Me Not, V-Type, Vocabularious, Word Invader and Poker.",
   })}
 <body class="page-games">
 ${header(rel, "games")}
@@ -322,7 +361,7 @@ ${header(rel, "games")}
     <div class="container">
       <div class="section__head">
         <h1 class="section__title">Our games</h1>
-        <p class="section__lead">Everything Game Odyssey has made, in one place. Playable games run in your browser with no download or account.</p>
+        <p class="section__lead">Everything GameOdyssey has made, in one place. Playable games run in your browser with no download or account.</p>
       </div>
       ${gamesGrid(rel)}
     </div>
@@ -352,7 +391,7 @@ function gamePage(g) {
   return `${head({
     rel,
     title: g.name,
-    description: `${g.name} — ${g.oneLiner} ${g.blurb[0]}`,
+    description: `${g.name}: ${g.oneLiner} ${g.blurb[0]}`,
     image: `assets/img/games/${g.slug}/banner.jpg`,
   })}
 <body class="page-game" data-game="${g.slug}" style="--accent:${g.accent}">
@@ -463,7 +502,7 @@ function playPage(g) {
         <img class="loading-logo" src="${rel}assets/img/games/${g.slug}/icon.png" alt="" width="96" height="96">
         <p class="loading-text">Loading ${esc(g.name)}…</p>
         <div id="unity-progress-bar-empty"><div id="unity-progress-bar-full"></div></div>
-        <p class="loading-hint">First load downloads the game (a few tens of MB) — it's cached after that.</p>
+        <p class="loading-hint">First load downloads the game (a few tens of MB). It's cached after that.</p>
       </div>
       <div id="unity-warning"></div>
     </div>
@@ -683,10 +722,12 @@ write("404.html", notFoundPage());
 for (const g of games) {
   write(`games/${g.slug}.html`, gamePage(g));
   if (g.playable && g.unity) {
-    const dir = join(ROOT, "play", g.slug);
+    const dir = join(ROOT, "play", playDir(g));
     if (!existsSync(join(dir, "Build"))) {
-      console.warn(`!! play/${g.slug}/Build is missing — wrapper written anyway`);
+      console.warn(`!! play/${playDir(g)}/Build is missing; wrapper written anyway`);
     }
-    write(`play/${g.slug}/index.html`, playPage(g));
+    write(`play/${playDir(g)}/index.html`, playPage(g));
+  } else if (g.playable && !existsSync(join(ROOT, "play", playDir(g), "index.html"))) {
+    console.warn(`!! play/${playDir(g)}/index.html is missing; "Play now" for ${g.name} will 404`);
   }
 }

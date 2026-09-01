@@ -1,7 +1,7 @@
 # GameOdyssey website
 
-Static marketing site for Game Odyssey's browser games, plus the Unity WebGL
-builds themselves. Plain HTML/CSS/JS with one PHP script for the contact form —
+Static marketing site for GameOdyssey's browser games, plus the Unity WebGL
+builds themselves. Plain HTML/CSS/JS with one PHP script for the contact form;
 deploys to Hostinger shared hosting (or any Apache/LiteSpeed + PHP host) by
 uploading the tree as-is.
 
@@ -14,7 +14,7 @@ play/<slug>/index.html   Unity WebGL wrapper (generated) + Build/, StreamingAsse
 assets/css|js|img|video|fonts
 contact.php              contact-form handler (PHP mail())
 .htaccess                MIME types for .wasm/.data, compression, caching, 404 page
-tools/site.json          ALL site copy and per-game data — edit this
+tools/site.json          ALL site copy and per-game data. Edit this
 tools/build.mjs          page generator:  node tools/build.mjs
 tools/import-assets.py   one-off artwork import/optimiser (needs Pillow + the D: archive)
 _legacy/                 the 2023 site and an old GoGammon build, kept for reference only.
@@ -39,13 +39,22 @@ To add a screenshot to a game, drop `NN.jpg` (≤1200px wide) and `NN-thumb.jpg`
 (400px wide) into `assets/img/games/<slug>/shots/` and set `"shots": N` in
 `site.json`. Backgammon currently has no screenshots (`"shots": 0`).
 
+## Word Invader (HTML5 remake)
+
+`play/wordinvader/` is the new HTML5 build of Word Invader (a Vite bundle with
+its own `index.html`), so the generator does **not** write a wrapper for it;
+`site.json` points at it with `"play": { "dir": "wordinvader" }` and
+`"unity": null`. Drop new builds straight into that folder. The original
+Unity build is kept in `play/wordinvader-pham/` (with the generated wrapper)
+but nothing links to it.
+
 ## Bob
 
-Bob (the GO alien) walks across the alien strip above the footer on the home,
+Bob (the GO alien) walks across the white strip above the footer on the home,
 games, contact and 404 pages. He's a pure-CSS sprite animation
 (`assets/img/site/bob-walk.png`, 16 frames of 128×130, from the 2014 site's
-`bobanimation.css`). The four walkers — direction, size, crossing time, walk
-speed, start offset and depth — are defined in the `BOBS` array in
+`bobanimation.css`). The four walkers (direction, size, crossing time, walk
+speed, start offset and depth) are defined in the `BOBS` array in
 `tools/build.mjs`; the animation lives under "Bob's walk" in `site.css`. He's
 hidden for visitors who prefer reduced motion, and only two walkers show on
 phones.
@@ -54,7 +63,7 @@ phones.
 
 * Upload everything except `_legacy/` and `tools/` to `public_html/`
   (they are 404-blocked anyway, but there's no reason to ship ~400 MB of them).
-* The Unity builds are 14–44 MB per file. Use the File Manager's upload or
+* The Unity builds are 14-44 MB per file. Use the File Manager's upload or
   FTP/SFTP; the git-deploy feature also works if the repo is under the size limit.
 * `contact.php` sends with PHP `mail()` from `noreply@<your-domain>` to the
   address in `RECIPIENT` at the top of the file. Make sure that recipient mailbox
@@ -70,12 +79,12 @@ phones.
   Cloud Save / Lobby). It stops at "Connecting…" with
   `invalid environment name provided` because the UGS project/environment it
   references no longer answers. That needs fixing in the Unity project and a
-  rebuild — nothing on the website side can work around it. **Bug Me Not**
+  rebuild; nothing on the website side can work around it. **Bug Me Not**
   ships the same UGS configuration and did not get past its splash screen in
   testing, so it very likely has the same problem. Brain Drops, V-Type,
   Vocabularious and Word Invader load and run offline.
 * `play/bug-me-not/Build/` also contains a stray copy of the `GoGammon.*`
-  Backgammon build (~60 MB) that nothing references — delete it.
+  Backgammon build (~60 MB) that nothing references. Delete it.
 * Games are desktop-first (keyboard). The wrapper lets them run on phones but
   the games themselves were not designed for touch.
 * `Arial Rounded MT Bold` (`assets/fonts/ARLRDBD.ttf`) is a Monotype/Microsoft

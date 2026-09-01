@@ -186,18 +186,19 @@ def main():
             ROOT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)]
         )
 
-    aliens = open_img(LEGACY / "Ailens.png")
-    if aliens is not None:
-        save_png(aliens.convert("RGBA"), site / "aliens.png", 1600)
-
     cinema = open_img(ELEM / "Cinema-Room.jpg")
     if cinema is not None:
         save_jpg(cinema, site / "cinema.jpg", 1200)
 
     # Bob's 16-frame walk cycle (128x130 per frame) from the 2014 CodeIgniter site.
-    bob = open_img(Path(r"C:\dev\goweb\danieldownes-goweb-9436bd94ac1b\danieldownes-goweb-9436bd94ac1bssets\imagestlasesobanimation.png"))
+    bob = open_img(Path(r"C:\dev\goweb\danieldownes-goweb-9436bd94ac1b\danieldownes-goweb-9436bd94ac1b\assets\images\atlases\bobanimation.png"))
     if bob is not None:
         save_png(bob.convert("RGBA"), site / "bob-walk.png")
+
+    # Immortal Unchained promo image from the legacy home page.
+    immortal = open_img(LEGACY / "header.jpg")
+    if immortal is not None:
+        save_jpg(immortal, site / "immortal-unchained.jpg", 920, quality=85)
 
     coin = open_img(ELEM / "gocoin.png")
     if coin is not None:

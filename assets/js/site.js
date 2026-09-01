@@ -1,4 +1,4 @@
-/* GameOdyssey — site behaviour. Vanilla JS, no dependencies. */
+/* GameOdyssey site behaviour. Vanilla JS, no dependencies. */
 (function () {
   "use strict";
 
@@ -38,19 +38,19 @@
     var userPaused = false;
     var INTERVAL = 7000;
 
-    // Slide art beyond the first is lazy-loaded; make sure the slide being
-    // shown and its neighbours are fetched so a jump never lands on black.
-    function warm(i) {
-      [i - 1, i, i + 1].forEach(function (n) {
-        var s = slides[(n + count) % count];
-        var img = s && s.querySelector(".slide__art img");
-        if (img && img.loading === "lazy") img.loading = "eager";
-      });
-    }
+    // Mark each slide's art once its banner has loaded, so overlays such as
+    // the ship exhaust never appear on their own against a black slide.
+    slides.forEach(function (s) {
+      var art = s.querySelector(".slide__art");
+      var img = art && art.querySelector("img");
+      if (!img) return;
+      var mark = function () { art.classList.add("is-loaded"); };
+      if (img.complete && img.naturalWidth > 0) mark();
+      else img.addEventListener("load", mark, { once: true });
+    });
 
     function show(i, focusDot) {
       index = (i + count) % count;
-      warm(index);
       track.style.transform = "translateX(-" + index * 100 + "%)";
       slides.forEach(function (s, n) {
         s.setAttribute("aria-hidden", n === index ? "false" : "true");
@@ -172,6 +172,32 @@
   }
 
   /* ------------------------------------------------------------------
+     Age gate for the featured title (home page). Links carrying
+     data-age-gate open a confirmation dialog before leaving the site.
+     ------------------------------------------------------------------ */
+  var gate = document.getElementById("age-gate");
+  var gated = Array.prototype.slice.call(document.querySelectorAll("[data-age-gate]"));
+  if (gate && gated.length && typeof HTMLDialogElement === "function") {
+    var pendingUrl = null;
+    gated.forEach(function (a) {
+      if (Number(a.getAttribute("data-age-gate")) <= 0) return;
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        pendingUrl = a.href;
+        gate.showModal();
+      });
+    });
+    gate.addEventListener("close", function () {
+      if (gate.returnValue === "yes" && pendingUrl) {
+        window.open(pendingUrl, "_blank", "noopener");
+      }
+      pendingUrl = null;
+      gate.returnValue = "";
+    });
+    gate.addEventListener("click", function (e) { if (e.target === gate) gate.close("no"); });
+  }
+
+  /* ------------------------------------------------------------------
      Contact form: timestamp for the spam check, inline validation, and
      status messages after the PHP handler redirects back.
      ------------------------------------------------------------------ */
@@ -183,12 +209,12 @@
     var status = form.querySelector(".form-status");
     var params = new URLSearchParams(window.location.search);
     if (status && params.has("sent")) {
-      status.textContent = "Thanks — your message has been sent. We'll get back to you soon.";
+      status.textContent = "Thanks, your message has been sent. We'll get back to you soon.";
       status.className = "form-status is-ok";
       status.hidden = false;
     } else if (status && params.has("error")) {
       var reasons = {
-        invalid: "Please check the form — every field is required and the email address must be valid.",
+        invalid: "Please check the form: every field is required and the email address must be valid.",
         mail: "Sorry, the message couldn't be sent right now. Please try again later or email us directly.",
         spam: "Your message was flagged as spam. If that's a mistake, please email us directly.",
       };

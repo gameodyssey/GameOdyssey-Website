@@ -23,6 +23,8 @@
 *.webp  binary
 *.svg   text eol=lf
 *.mp4   binary
+*.wav   binary
+*.mp3   binary
 *.webm  binary
 *.ttf   binary
 *.otf   binary

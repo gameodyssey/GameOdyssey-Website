@@ -11,12 +11,51 @@
       "youtube": null
     },
     "about": [
-      "Game Odyssey — GO — unites fun-loving Earthlings through a variety of free and cool social games.",
+      "GameOdyssey (GO for short) unites fun-loving Earthlings through a variety of free and cool social games.",
       "GO is a London-based studio that develops and distributes games across multiple platforms. Our classic catalogue now plays straight from your browser: no download, no sign-up, just hit play.",
       "Our mission is to build exciting games that Odysseans can enjoy alone or among friends."
-    ]
+    ],
+    "featured": {
+      "title": "Immortal: Unchained",
+      "image": "assets/img/site/immortal-unchained.jpg",
+      "text": "Unleashed and unforgiving. Can you rise to the challenge? Immortal: Unchained is the latest addition to the genre of ultra-hardcore action RPGs. Take the role of a living weapon, unleashed to stop the source of a cataclysmic event threatening to end all worlds.",
+      "url": "https://store.steampowered.com/app/369440/Immortal_Unchained/",
+      "linkText": "Play now",
+      "minAge": 16
+    }
   },
   "games": [
+    {
+      "slug": "word-invader",
+      "name": "Word Invader",
+      "shortName": "Word Invader",
+      "oneLiner": "A side-scrolling space shoot 'em up that isn't for the faint-hearted.",
+      "tagline": "Are you ready to take on the challenge?",
+      "blurb": [
+        "A hostile foe has begun to bomb the Word Planets of the Outer Colonies, causing debris to tumble through a worm hole and threaten Earth's existence.",
+        "You have been assigned to collect the falling letters and cease the bombing campaign by destroying the hostile craft and taking out their leader.",
+        "Collect power ups, earn GO Coins and unlock hidden prizes as you battle evil in GameOdyssey's toughest game yet!",
+        "Word Invader is a side-scrolling, classic-styled space shoot 'em up that isn't for the faint-hearted."
+      ],
+      "features": [
+        "Side-scrolling shooter",
+        "Power ups & hidden prizes",
+        "Boss battles"
+      ],
+      "playable": true,
+      "unity": null,
+      "shots": 3,
+      "accent": "#3fae9c",
+      "heroPosition": "center top",
+      "exhaust": {
+        "x": 34.8,
+        "y": 39.6
+      },
+      "play": {
+        "dir": "wordinvader",
+        "note": "HTML5 remake (Vite build); the original Unity build is kept in play/wordinvader-pham/"
+      }
+    },
     {
       "slug": "backgammon",
       "name": "GO Backgammon",
@@ -24,7 +63,7 @@
       "oneLiner": "The oldest game in history on GO's stunning tables.",
       "tagline": "Roll the dice and make your move!",
       "blurb": [
-        "Show your skill and strategy by playing one of the oldest games in history on Game Odyssey's stunning Backgammon tables!",
+        "Show your skill and strategy by playing one of the oldest games in history on GameOdyssey's stunning Backgammon tables!",
         "Play with old and new friends in this timeless game with classic rules or, if you are a pro looking for a challenge, take on others in daily tournaments and battle in brand new modes of play.",
         "GO's Backgammon has lots to offer to both new players, with a fun and relaxing atmosphere, and veterans, with the excitement of tense competition and high stakes."
       ],
@@ -33,7 +72,7 @@
         "Daily tournaments",
         "New modes of play"
       ],
-      "playable": true,
+      "playable": false,
       "unity": {
         "build": "GoGammon",
         "width": 1024,
@@ -41,13 +80,14 @@
       },
       "shots": 0,
       "accent": "#c9a86a",
-      "heroPosition": "center top"
+      "heroPosition": "center top",
+      "status": "Coming back soon"
     },
     {
       "slug": "brain-drops",
       "name": "Brain Drops",
       "shortName": "Brain Drops",
-      "oneLiner": "Heads up, think fast — type to save the town.",
+      "oneLiner": "Heads up and think fast: type to save the town.",
       "tagline": "Have you got the brain for this game?",
       "blurb": [
         "A cosmic jar of objects is hurtling towards the town of Brain Drops. It is your job to protect the town by typing the object names to destroy them.",
@@ -149,44 +189,13 @@
       "heroPosition": "center top"
     },
     {
-      "slug": "word-invader",
-      "name": "Word Invader",
-      "shortName": "Word Invader",
-      "oneLiner": "A side-scrolling space shoot 'em up that isn't for the faint-hearted.",
-      "tagline": "Are you ready to take on the challenge?",
-      "blurb": [
-        "A hostile foe has begun to bomb the Word Planets of the Outer Colonies, causing debris to tumble through a worm hole and threaten Earth's existence.",
-        "You have been assigned to collect the falling letters and cease the bombing campaign by destroying the hostile craft and taking out their leader.",
-        "Collect power ups, earn GO Coins and unlock hidden prizes as you battle evil in Game Odyssey's toughest game yet!",
-        "Word Invader is a side-scrolling, classic-styled space shoot 'em up that isn't for the faint-hearted."
-      ],
-      "features": [
-        "Side-scrolling shooter",
-        "Power ups & hidden prizes",
-        "Boss battles"
-      ],
-      "playable": true,
-      "unity": {
-        "build": "WI",
-        "width": 1024,
-        "height": 768
-      },
-      "shots": 3,
-      "accent": "#3fae9c",
-      "heroPosition": "center top",
-      "exhaust": {
-        "x": 34.8,
-        "y": 39.6
-      }
-    },
-    {
       "slug": "poker",
       "name": "GO Poker",
       "shortName": "Poker",
-      "oneLiner": "Hold 'Em on Game Odyssey's luxury tables.",
+      "oneLiner": "Hold 'Em on GameOdyssey's luxury tables.",
       "tagline": "May Lady Luck be on your side!",
       "blurb": [
-        "Join the fun and excitement of Hold 'Em on Game Odyssey's luxury Poker tables.",
+        "Join the fun and excitement of Hold 'Em on GameOdyssey's luxury Poker tables.",
         "Meet old and new friends at any table you like, chat as you play and make your mark by competing in tournaments to establish your chip ranking and climb the GO leaderboard.",
         "Visit the GO gift shop to purchase unique icons to deck out your Profile page. Earn GO coins to treat yourself and your friends to gifts."
       ],
