@@ -1,0 +1,39 @@
+{
+ "bugs": {
+  "ant": {
+   "frameWidth": 100,
+   "frameHeight": 120,
+   "frames": 20
+  },
+  "spider": {
+   "frameWidth": 100,
+   "frameHeight": 100,
+   "frames": 20
+  },
+  "termite": {
+   "frameWidth": 100,
+   "frameHeight": 128,
+   "frames": 20
+  },
+  "worm": {
+   "frameWidth": 100,
+   "frameHeight": 200,
+   "frames": 20
+  },
+  "woodlouse": {
+   "frameWidth": 100,
+   "frameHeight": 100,
+   "frames": 20
+  },
+  "spiderbot": {
+   "frameWidth": 100,
+   "frameHeight": 100,
+   "frames": 20
+  }
+ },
+ "smoke": {
+  "frameWidth": 48,
+  "frameHeight": 110,
+  "frames": 41
+ }
+}

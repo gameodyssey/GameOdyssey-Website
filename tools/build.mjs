@@ -608,6 +608,13 @@ function html5Page(g) {
   const script = scripts[scripts.length - 1];
   const w = (g.play && g.play.width) || 1374;
   const h = (g.play && g.play.height) || 990;
+  // Some builds rasterise text with a web font; declare it and keep an
+  // off-screen probe so the browser fetches it before the game does.
+  const font = (g.play && g.play.font) || null;
+  const fontStyle = font
+    ? `\n  <style>@font-face{font-family:'${font.family}';src:url('./${font.file}') format('truetype');font-display:block;}#fontprobe{position:absolute;left:-9999px;font-family:'${font.family}';}</style>`
+    : "";
+  const fontProbe = font ? `\n  <div id="fontprobe">.</div>` : "";
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -619,11 +626,11 @@ function html5Page(g) {
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#111214">
   <link rel="icon" href="${rel}favicon.ico" sizes="any">
-  <link rel="stylesheet" href="${rel}assets/css/play.css?v=${BUILD_ID}">${styles
+  <link rel="stylesheet" href="${rel}assets/css/play.css?v=${BUILD_ID}">${fontStyle}${styles
     .map((c) => `\n  <link rel="stylesheet" href="./assets/${c}">`)
     .join("")}${script ? `\n  <script type="module" crossorigin src="./assets/${script}"></script>` : ""}
 </head>
-<body>
+<body>${fontProbe}
   <header class="play-bar">
     <a class="play-bar__back" href="${rel}games/${g.slug}.html">&larr; Back to ${esc(site.name)}</a>
     <span class="play-bar__title">${esc(g.name)}</span>

@@ -130,14 +130,21 @@
         "Leaderboards"
       ],
       "playable": true,
-      "unity": {
-        "build": "BugMeNot",
-        "width": 1024,
-        "height": 768
-      },
+      "unity": null,
       "shots": 3,
       "accent": "#c8383a",
-      "heroPosition": "center 78%"
+      "heroPosition": "center 78%",
+      "play": {
+        "dir": "bugmenot",
+        "html5": true,
+        "width": 2048,
+        "height": 1536,
+        "font": {
+          "family": "Varela Round",
+          "file": "assets/fonts/VarelaRound-Regular.ttf"
+        },
+        "note": "Phaser/Vite build from C:/dev/Bug Me Not/bugmenot-html5 (native 2048x1536). The old Unity build stays in play/bug-me-not/ but nothing links to it."
+      }
     },
     {
       "slug": "v-type",
