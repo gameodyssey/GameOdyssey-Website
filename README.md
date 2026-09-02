@@ -50,7 +50,15 @@ ratio) and finds the hashed `assets/index-*.js` bundle on disk.
 
 To ship a new game build: copy the Vite `dist/` contents into `play/wordinvader/`
 (delete the old `assets/index-*.js` first so only one bundle remains), then run
-`node tools/build.mjs` to regenerate the wrapper. The original Unity build is
+`node tools/build.mjs` to regenerate the wrapper.
+
+**Important:** Hostinger's CDN drops some of the game's parallel asset requests,
+which left textures (e.g. the background layers) silently missing on the live
+site. The deployed bundle is patched to add
+`loader: { maxParallelDownloads: 4, maxRetries: 10 }` to the Phaser game config.
+Add the same `loader` block to the game's config in the WordInvader source so
+future builds keep it — a fresh Vite build without it will regress. Converting
+the 7.8 MB of .wav audio to .ogg/.mp3 would also cut load time a lot. The original Unity build is
 kept in `play/wordinvader-pham/` but nothing links to it.
 
 ## Bob
