@@ -75,16 +75,18 @@
         "Daily tournaments",
         "New modes of play"
       ],
-      "playable": false,
-      "unity": {
-        "build": "GoGammon",
-        "width": 1024,
-        "height": 768
-      },
-      "shots": 0,
+      "playable": true,
+      "unity": null,
+      "shots": 3,
       "accent": "#c9a86a",
       "heroPosition": "center top",
-      "status": "Coming back soon"
+      "play": {
+        "dir": "gogammon",
+        "html5": true,
+        "fill": true,
+        "bg": "#08200f",
+        "note": "Three.js + Phaser build from C:/dev/GoGammon/gogammon-html5; sizes itself to the window, so the wrapper is full-bleed with a floating back chip. The old Unity build stays in play/backgammon/ but nothing links to it."
+      }
     },
     {
       "slug": "brain-drops",

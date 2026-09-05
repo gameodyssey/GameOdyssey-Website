@@ -606,6 +606,64 @@ function html5Page(g) {
   if (scripts.length === 0) console.warn(`!! play/${dir}/assets has no index-*.js bundle`);
   if (scripts.length > 1) console.warn(`!! play/${dir}/assets has ${scripts.length} index-*.js bundles; using ${scripts[scripts.length - 1]}. Delete the stale ones.`);
   const script = scripts[scripts.length - 1];
+
+  // Fill mode ("play": { "fill": true }) for builds that size themselves to
+  // their container (GoGammon: a Three.js table canvas with a transparent
+  // Phaser UI canvas on top). Same bar as the other games; the game's own
+  // markup, mirrored from its dist/index.html, fills the space below it.
+  if (g.play && g.play.fill) {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Play ${esc(g.name)} · ${esc(site.name)}</title>
+  <meta name="description" content="Play ${esc(g.name)} free in your browser. ${esc(g.oneLiner)}">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="${esc(g.play.bg || "#111214")}">
+  <link rel="icon" href="${rel}favicon.ico" sizes="any">
+  <link rel="stylesheet" href="${rel}assets/css/play.css?v=${BUILD_ID}">
+  <style>
+    html, body { height: 100%; overflow: hidden; background: ${esc(g.play.bg || "#111214")}; }
+    #app { position: fixed; top: 52px; left: 0; right: 0; bottom: 0; touch-action: none; -webkit-user-select: none; user-select: none; }
+    #app:fullscreen { top: 0; }
+    #three { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    #game { position: absolute; inset: 0; }
+    #game canvas { position: absolute; left: 0; top: 0; }
+  </style>${styles.map((c) => `\n  <link rel="stylesheet" href="./assets/${c}">`).join("")}${
+      script ? `\n  <script type="module" crossorigin src="./assets/${script}"></script>` : ""
+    }
+</head>
+<body class="play-fill">
+  <header class="play-bar">
+    <a class="play-bar__back" href="${rel}games/${g.slug}.html">&larr; Back to ${esc(site.name)}</a>
+    <span class="play-bar__title">${esc(g.name)}</span>
+    <button type="button" class="play-bar__btn" id="html5-fullscreen-button">Fullscreen</button>
+  </header>
+  <div id="app">
+    <canvas id="three"></canvas>
+    <div id="game"></div>
+  </div>
+  <script>
+    (function () {
+      var stage = document.getElementById("app");
+      var btn = document.getElementById("html5-fullscreen-button");
+      if (!stage.requestFullscreen) { btn.hidden = true; return; }
+      btn.addEventListener("click", function () {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else stage.requestFullscreen();
+      });
+      document.addEventListener("fullscreenchange", function () {
+        btn.textContent = document.fullscreenElement ? "Exit fullscreen" : "Fullscreen";
+        // The game re-measures its container on window resize.
+        window.dispatchEvent(new Event("resize"));
+      });
+    })();
+  </script>
+</body>
+</html>
+`;
+  }
   const w = (g.play && g.play.width) || 1374;
   const h = (g.play && g.play.height) || 990;
   // Some builds rasterise text with a web font; declare it and keep an

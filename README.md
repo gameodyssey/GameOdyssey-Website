@@ -39,6 +39,19 @@ To add a screenshot to a game, drop `NN.jpg` (≤1200px wide) and `NN-thumb.jpg`
 (400px wide) into `assets/img/games/<slug>/shots/` and set `"shots": N` in
 `site.json`. Backgammon currently has no screenshots (`"shots": 0`).
 
+## GO Backgammon (HTML5 remake)
+
+`play/gogammon/` is the HTML5 remake of GO Backgammon (Three.js table +
+transparent Phaser UI, source at `C:/dev/GoGammon/gogammon-html5`). Unlike the
+other remakes it sizes itself to the window, so `site.json` uses
+`"play": { "dir": "gogammon", "html5": true, "fill": true, "bg": "#08200f" }`
+and the generated wrapper is full-bleed with a floating "back" chip instead of
+the top bar. Ship new builds the same way as the others (copy `dist/` in,
+remove the stale `assets/index-*.js`, run `node tools/build.mjs`). The gentle
+`loader` block lives in the game's `src/main.ts`. The old Unity build stays
+unlinked in `play/backgammon/` (with the stray GoGammon copies in
+`play/bug-me-not/Build/` still a delete candidate).
+
 ## Bug Me Not (HTML5 remake)
 
 `play/bugmenot/` is the HTML5 build of Bug Me Not (Phaser/Vite, native
