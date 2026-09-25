@@ -1,0 +1,548 @@
+{
+ "Alarm": {
+  "key": "alarm",
+  "stages": 2,
+  "w": 83,
+  "h": 87
+ },
+ "Apple": {
+  "key": "apple",
+  "stages": 4,
+  "w": 113,
+  "h": 124
+ },
+ "Arrow": {
+  "key": "arrow",
+  "stages": 1,
+  "w": 79,
+  "h": 77
+ },
+ "Banana": {
+  "key": "banana",
+  "stages": 2,
+  "w": 131,
+  "h": 175
+ },
+ "Basketball": {
+  "key": "basketball",
+  "stages": 3,
+  "w": 148,
+  "h": 148
+ },
+ "Bat": {
+  "key": "bat",
+  "stages": 2,
+  "w": 63,
+  "h": 77
+ },
+ "Bath": {
+  "key": "bathtub",
+  "stages": 2,
+  "w": 175,
+  "h": 139
+ },
+ "Bomb": {
+  "key": "bomb",
+  "stages": 1,
+  "w": 240,
+  "h": 240
+ },
+ "Boots": {
+  "key": "boots",
+  "stages": 2,
+  "w": 104,
+  "h": 117
+ },
+ "Brick": {
+  "key": "brick",
+  "stages": 3,
+  "w": 111,
+  "h": 111
+ },
+ "Broccoli": {
+  "key": "broccoli",
+  "stages": 3,
+  "w": 119,
+  "h": 163
+ },
+ "Broom": {
+  "key": "broom",
+  "stages": 1,
+  "w": 55,
+  "h": 80
+ },
+ "Brush": {
+  "key": "brush",
+  "stages": 1,
+  "w": 136,
+  "h": 144
+ },
+ "Bucket": {
+  "key": "bucket",
+  "stages": 3,
+  "w": 113,
+  "h": 183
+ },
+ "Calculator": {
+  "key": "calculator",
+  "stages": 1,
+  "w": 224,
+  "h": 176
+ },
+ "Camera": {
+  "key": "camera",
+  "stages": 2,
+  "w": 164,
+  "h": 155
+ },
+ "Carrot": {
+  "key": "carrot",
+  "stages": 2,
+  "w": 43,
+  "h": 74
+ },
+ "Cassette": {
+  "key": "cassette",
+  "stages": 3,
+  "w": 201,
+  "h": 156
+ },
+ "Chair": {
+  "key": "chair",
+  "stages": 2,
+  "w": 59,
+  "h": 149
+ },
+ "Cheese": {
+  "key": "cheese",
+  "stages": 3,
+  "w": 119,
+  "h": 112
+ },
+ "Chilli": {
+  "key": "chilli",
+  "stages": 3,
+  "w": 167,
+  "h": 102
+ },
+ "Clock": {
+  "key": "clock",
+  "stages": 4,
+  "w": 117,
+  "h": 160
+ },
+ "Coconut": {
+  "key": "coconut",
+  "stages": 2,
+  "w": 137,
+  "h": 147
+ },
+ "Compactdisk": {
+  "key": "compactdisk",
+  "stages": 3,
+  "w": 151,
+  "h": 152
+ },
+ "Crown": {
+  "key": "crown",
+  "stages": 3,
+  "w": 150,
+  "h": 146
+ },
+ "Cucumber": {
+  "key": "cucumber",
+  "stages": 4,
+  "w": 86,
+  "h": 145
+ },
+ "Cup": {
+  "key": "cup",
+  "stages": 4,
+  "w": 86,
+  "h": 92
+ },
+ "Dart": {
+  "key": "dart",
+  "stages": 2,
+  "w": 131,
+  "h": 136
+ },
+ "Doughnut": {
+  "key": "doughnut",
+  "stages": 2,
+  "w": 191,
+  "h": 177
+ },
+ "Drum": {
+  "key": "drum",
+  "stages": 3,
+  "w": 111,
+  "h": 119
+ },
+ "Duck": {
+  "key": "duck",
+  "stages": 3,
+  "w": 123,
+  "h": 158
+ },
+ "Dynamite": {
+  "key": "dynamite",
+  "stages": 1,
+  "w": 240,
+  "h": 240
+ },
+ "Egg": {
+  "key": "egg",
+  "stages": 4,
+  "w": 111,
+  "h": 146
+ },
+ "Eggplant": {
+  "key": "eggplant",
+  "stages": 3,
+  "w": 101,
+  "h": 100
+ },
+ "Fan": {
+  "key": "fan",
+  "stages": 4,
+  "w": 88,
+  "h": 108
+ },
+ "Feather": {
+  "key": "feather",
+  "stages": 3,
+  "w": 95,
+  "h": 213
+ },
+ "Fireextinguisher": {
+  "key": "fireextinguiser",
+  "stages": 2,
+  "w": 57,
+  "h": 147
+ },
+ "Flower": {
+  "key": "flower",
+  "stages": 2,
+  "w": 126,
+  "h": 139
+ },
+ "Football": {
+  "key": "football",
+  "stages": 3,
+  "w": 160,
+  "h": 160
+ },
+ "Fortune": {
+  "key": "fortune",
+  "stages": 1,
+  "w": 153,
+  "h": 123
+ },
+ "Glasses": {
+  "key": "glasses",
+  "stages": 2,
+  "w": 195,
+  "h": 109
+ },
+ "Globe": {
+  "key": "globe",
+  "stages": 4,
+  "w": 124,
+  "h": 161
+ },
+ "Gramophone": {
+  "key": "gramophone",
+  "stages": 2,
+  "w": 122,
+  "h": 105
+ },
+ "Grape": {
+  "key": "grapes",
+  "stages": 1,
+  "w": 122,
+  "h": 124
+ },
+ "Grenade": {
+  "key": "grenade",
+  "stages": 1,
+  "w": 240,
+  "h": 240
+ },
+ "Guitar": {
+  "key": "guitar",
+  "stages": 1,
+  "w": 164,
+  "h": 205
+ },
+ "Hairdryer": {
+  "key": "hairdryer",
+  "stages": 1,
+  "w": 96,
+  "h": 71
+ },
+ "Hammer": {
+  "key": "hammer",
+  "stages": 1,
+  "w": 82,
+  "h": 57
+ },
+ "Hanger": {
+  "key": "hanger",
+  "stages": 2,
+  "w": 181,
+  "h": 95
+ },
+ "Iron": {
+  "key": "iron",
+  "stages": 3,
+  "w": 163,
+  "h": 118
+ },
+ "Jelly": {
+  "key": "jelly",
+  "stages": 3,
+  "w": 143,
+  "h": 83
+ },
+ "Kettle": {
+  "key": "kettle",
+  "stages": 4,
+  "w": 123,
+  "h": 175
+ },
+ "Lantern": {
+  "key": "lantern",
+  "stages": 4,
+  "w": 90,
+  "h": 157
+ },
+ "Lemon": {
+  "key": "lemon",
+  "stages": 3,
+  "w": 131,
+  "h": 110
+ },
+ "Mushroom": {
+  "key": "mushroom",
+  "stages": 4,
+  "w": 123,
+  "h": 137
+ },
+ "Onion": {
+  "key": "onion",
+  "stages": 4,
+  "w": 109,
+  "h": 71
+ },
+ "Orange": {
+  "key": "orange",
+  "stages": 4,
+  "w": 89,
+  "h": 141
+ },
+ "Paintbrush": {
+  "key": "paintbrush",
+  "stages": 3,
+  "w": 53,
+  "h": 76
+ },
+ "Pen": {
+  "key": "pen",
+  "stages": 2,
+  "w": 49,
+  "h": 161
+ },
+ "Pencil": {
+  "key": "pencil",
+  "stages": 2,
+  "w": 52,
+  "h": 186
+ },
+ "Piano": {
+  "key": "piano",
+  "stages": 4,
+  "w": 127,
+  "h": 102
+ },
+ "Piggybank": {
+  "key": "piggybank",
+  "stages": 4,
+  "w": 179,
+  "h": 159
+ },
+ "Pineapple": {
+  "key": "pineapple",
+  "stages": 3,
+  "w": 98,
+  "h": 158
+ },
+ "Pizza": {
+  "key": "pizza",
+  "stages": 1,
+  "w": 134,
+  "h": 76
+ },
+ "Polaroid": {
+  "key": "polaroid",
+  "stages": 4,
+  "w": 173,
+  "h": 116
+ },
+ "Postbox": {
+  "key": "postbox",
+  "stages": 2,
+  "w": 81,
+  "h": 191
+ },
+ "Raspberry": {
+  "key": "raspberry",
+  "stages": 3,
+  "w": 123,
+  "h": 140
+ },
+ "Robot": {
+  "key": "robot",
+  "stages": 4,
+  "w": 36,
+  "h": 103
+ },
+ "Shovel": {
+  "key": "shovel",
+  "stages": 2,
+  "w": 43,
+  "h": 73
+ },
+ "Skateboard": {
+  "key": "skateboard",
+  "stages": 2,
+  "w": 167,
+  "h": 110
+ },
+ "Skull": {
+  "key": "skull",
+  "stages": 3,
+  "w": 140,
+  "h": 183
+ },
+ "Snowman": {
+  "key": "snowman",
+  "stages": 3,
+  "w": 95,
+  "h": 89
+ },
+ "Stapler": {
+  "key": "stapler",
+  "stages": 4,
+  "w": 148,
+  "h": 107
+ },
+ "Stool": {
+  "key": "stool",
+  "stages": 3,
+  "w": 108,
+  "h": 145
+ },
+ "Strawberry": {
+  "key": "stawberry",
+  "stages": 4,
+  "w": 118,
+  "h": 138
+ },
+ "Sword": {
+  "key": "sword",
+  "stages": 2,
+  "w": 121,
+  "h": 189
+ },
+ "Telephonebox": {
+  "key": "telephonebox",
+  "stages": 4,
+  "w": 84,
+  "h": 188
+ },
+ "Television": {
+  "key": "television",
+  "stages": 4,
+  "w": 153,
+  "h": 191
+ },
+ "Toaster": {
+  "key": "toaster",
+  "stages": 4,
+  "w": 147,
+  "h": 145
+ },
+ "Toilet": {
+  "key": "toilet",
+  "stages": 4,
+  "w": 124,
+  "h": 179
+ },
+ "Tomato": {
+  "key": "tomato",
+  "stages": 3,
+  "w": 147,
+  "h": 85
+ },
+ "Toothbrush": {
+  "key": "toothbrush",
+  "stages": 2,
+  "w": 128,
+  "h": 89
+ },
+ "Trophy": {
+  "key": "trophy",
+  "stages": 4,
+  "w": 62,
+  "h": 111
+ },
+ "Trumpet": {
+  "key": "trumpet",
+  "stages": 3,
+  "w": 181,
+  "h": 89
+ },
+ "Typewriter": {
+  "key": "typewriter",
+  "stages": 1,
+  "w": 164,
+  "h": 124
+ },
+ "Tyre": {
+  "key": "tyre",
+  "stages": 1,
+  "w": 128,
+  "h": 140
+ },
+ "Vase": {
+  "key": "vase",
+  "stages": 4,
+  "w": 83,
+  "h": 151
+ },
+ "Violin": {
+  "key": "violin",
+  "stages": 3,
+  "w": 126,
+  "h": 182
+ },
+ "Volleyball": {
+  "key": "volleyball",
+  "stages": 3,
+  "w": 136,
+  "h": 136
+ },
+ "Watermelon": {
+  "key": "watermelon",
+  "stages": 4,
+  "w": 103,
+  "h": 92
+ },
+ "Wheelbarrow": {
+  "key": "wheelbarrow",
+  "stages": 4,
+  "w": 183,
+  "h": 174
+ }
+}

@@ -1,0 +1,1305 @@
+{
+  "Alarm": {
+    "design": "m_alarm",
+    "word": "alarm",
+    "hitSounds": [
+      "ALARM_HIT",
+      "ALARM_PIECE",
+      "ALARM_GLASS",
+      "ALARM_BELL",
+      "ALARM_BREAK"
+    ],
+    "fx": [
+      "sparks"
+    ],
+    "difficulty": 4
+  },
+  "Apple": {
+    "design": "m_apple",
+    "word": "apple",
+    "hitSounds": [
+      "PINEAPPLE_HIT",
+      "PINEAPPLE1",
+      "PINEAPPLE2",
+      "PINEAPPLE_DIE"
+    ],
+    "splat": {
+      "counts": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "brightness": 0,
+      "contrast": 72,
+      "saturation": -57,
+      "hue": -11
+    },
+    "difficulty": 2
+  },
+  "Arrow": {
+    "design": "m_arrow",
+    "word": "arrow",
+    "hitSounds": [
+      "ARROW_HIT1",
+      "ARROW_HIT2",
+      "ARROW_BREAK"
+    ],
+    "difficulty": 3
+  },
+  "Banana": {
+    "design": "m_banana",
+    "word": "banana",
+    "hitSounds": [
+      "PINEAPPLE_HIT",
+      "PINEAPPLE1",
+      "PINEAPPLE2",
+      "PINEAPPLE_DIE"
+    ],
+    "splat": {
+      "counts": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "brightness": 0,
+      "contrast": 72,
+      "saturation": -57,
+      "hue": -50
+    },
+    "difficulty": 3
+  },
+  "Basketball": {
+    "design": "m_basketball",
+    "word": "basketball",
+    "wordEs": "baloncesto",
+    "soundEs": "basketball_es",
+    "hitSounds": [
+      "BASKETBALL_HIT1",
+      "BASKETBALL_HIT3",
+      "BASKETBALL_HIT2"
+    ],
+    "difficulty": 2,
+    "esMode": true
+  },
+  "Bat": {
+    "design": "m_bat",
+    "word": "bat",
+    "hitSounds": [
+      "STOOL_HIT",
+      "STOOL_DIE"
+    ],
+    "difficulty": 1
+  },
+  "Bath": {
+    "design": "m_bathtub",
+    "word": "bath",
+    "altWords": [
+      "tub"
+    ],
+    "hitSounds": [
+      "KETTLE_HIT",
+      "toilet_1_wav",
+      "toilet_2_wav"
+    ],
+    "difficulty": 1
+  },
+  "Bear": {
+    "design": "m_bear",
+    "word": "bear",
+    "wordEs": "cepille",
+    "hitSounds": [
+      "FEATHER_HIT",
+      "flower_1_wav"
+    ],
+    "unusedInEN": true
+  },
+  "Bomb": {
+    "design": "m_bomb",
+    "word": "bomb",
+    "hitSounds": [
+      "BROCOLLI_SLICE1",
+      "BROCOLLI_SLICE2",
+      "BROCOLLI_SLICE2"
+    ],
+    "fx": [
+      "fireball",
+      "sparks"
+    ],
+    "difficulty": 2
+  },
+  "Boots": {
+    "design": "m_boots",
+    "word": "boots",
+    "hitSounds": [
+      "BOOTS_HIT1",
+      "BOOTS_HIT2",
+      "BOOTS_HIT3",
+      "BOOTS_BREAK"
+    ],
+    "difficulty": 2
+  },
+  "Brick": {
+    "design": "m_brick",
+    "word": "brick",
+    "hitSounds": [
+      "toilet_2_wav",
+      "toilet_3_wav"
+    ],
+    "difficulty": 1
+  },
+  "Broccoli": {
+    "design": "m_broccoli",
+    "word": "broccoli",
+    "hitSounds": [
+      "BROCOLLI_SLICE1",
+      "BROCOLLI_SLICE2",
+      "BROCOLLI_SLICES"
+    ],
+    "difficulty": 6
+  },
+  "Broom": {
+    "design": "m_broom",
+    "word": "broom",
+    "hitSounds": [
+      "BRUSH_HIT",
+      "BRUSH_DIE"
+    ],
+    "difficulty": 3
+  },
+  "Brush": {
+    "design": "m_brush",
+    "word": "brush",
+    "altWords": [
+      "hairbrush"
+    ],
+    "wordEs": "cepillo",
+    "soundEs": "brush_es",
+    "hitSounds": [
+      "BRUSH_HIT",
+      "BRUSH_DIE"
+    ],
+    "difficulty": 3,
+    "esMode": true
+  },
+  "Bucket": {
+    "design": "m_bucket",
+    "word": "bucket",
+    "hitSounds": [
+      "hairdryer_1_wav",
+      "HAMMER_HIT"
+    ],
+    "difficulty": 4
+  },
+  "Calculator": {
+    "design": "m_calculator",
+    "word": "calculater",
+    "hitSounds": [
+      "CASSETTE_HIT",
+      "TYPEWRITER_HIT",
+      "CAMERA_DIE"
+    ],
+    "fx": [
+      "sparks"
+    ],
+    "difficulty": 7
+  },
+  "Camera": {
+    "design": "m_camera",
+    "word": "camera",
+    "hitSounds": [
+      "CAMERA_HIT",
+      "CAMERA1",
+      "CAMERA2",
+      "CAMERA3",
+      "CAMERA_DIE"
+    ],
+    "fx": [
+      "sparks"
+    ],
+    "difficulty": 3
+  },
+  "Carrot": {
+    "design": "m_carrot",
+    "word": "carrot",
+    "hitSounds": [
+      "CARROT_HIT",
+      "CARROT_DIE"
+    ],
+    "difficulty": 3
+  },
+  "Cassette": {
+    "design": "m_cassette",
+    "word": "cassette",
+    "altWords": [
+      "tape"
+    ],
+    "hitSounds": [
+      "CASSETTE_HIT"
+    ],
+    "difficulty": 6
+  },
+  "Chair": {
+    "design": "m_chair",
+    "word": "chair",
+    "hitSounds": [
+      "CHAIR_HIT",
+      "CHAIR_DIE"
+    ],
+    "difficulty": 4
+  },
+  "Cheese": {
+    "design": "m_cheese",
+    "word": "cheese",
+    "wordEs": "queso",
+    "soundEs": "cheese_es",
+    "hitSounds": [
+      "PIZZA_HIT",
+      "PIZZA_DIE"
+    ],
+    "splat": {
+      "counts": [
+        4,
+        6
+      ],
+      "brightness": 0,
+      "contrast": 72,
+      "saturation": -45,
+      "hue": -50
+    },
+    "difficulty": 3,
+    "esMode": true
+  },
+  "Chilli": {
+    "design": "m_chilli",
+    "word": "chilli",
+    "hitSounds": [
+      "CHILI"
+    ],
+    "difficulty": 3
+  },
+  "Clock": {
+    "design": "m_clock",
+    "word": "clock",
+    "wordEs": "reloj",
+    "hitSounds": [
+      "CLOCK_HIT",
+      "CLOCK1",
+      "CLOCK2",
+      "CLOCK_DIE"
+    ],
+    "difficulty": 2,
+    "esMode": true
+  },
+  "Coconut": {
+    "design": "m_coconut",
+    "word": "coconut",
+    "hitSounds": [
+      "COCONUT_HIT",
+      "COCONUT_DIE"
+    ],
+    "splat": {
+      "counts": [
+        4,
+        8
+      ],
+      "brightness": 0,
+      "contrast": 72,
+      "saturation": -57,
+      "hue": -111
+    },
+    "contains": [
+      "Apple",
+      "Banana",
+      "Pineapple"
+    ],
+    "difficulty": 3
+  },
+  "Compactdisk": {
+    "design": "m_compactdisk",
+    "word": "compactdisk",
+    "hitSounds": [
+      "CD_HIT"
+    ],
+    "difficulty": 7
+  },
+  "Crown": {
+    "design": "m_crown",
+    "word": "crown",
+    "hitSounds": [
+      "CROWN_HIT"
+    ],
+    "difficulty": 4
+  },
+  "Cucumber": {
+    "design": "m_cucumber",
+    "word": "cucumber",
+    "hitSounds": [
+      "CUCUMBER_HIT"
+    ],
+    "splat": {
+      "counts": [
+        5
+      ],
+      "brightness": 0,
+      "contrast": 72,
+      "saturation": -57,
+      "hue": -11
+    },
+    "difficulty": 6
+  },
+  "Cup": {
+    "design": "m_cup",
+    "word": "cup",
+    "wordEs": "copa",
+    "hitSounds": [
+      "toilet_2_wav",
+      "toilet_3_wav"
+    ],
+    "difficulty": 1,
+    "esMode": true
+  },
+  "Dart": {
+    "design": "m_dart",
+    "word": "dart",
+    "hitSounds": [
+      "ARROW_HIT1",
+      "DART_HIT"
+    ],
+    "difficulty": 3
+  },
+  "Dish": {
+    "design": "m_dish",
+    "word": "dish",
+    "hitSounds": [
+      "DISH_HIT",
+      "DISH_DIE"
+    ],
+    "unusedInEN": true
+  },
+  "Doughnut": {
+    "design": "m_doughnut",
+    "word": "doughnut",
+    "hitSounds": [
+      "DOUGHNUT_HIT"
+    ],
+    "difficulty": 4
+  },
+  "Drum": {
+    "design": "m_drum",
+    "word": "drum",
+    "hitSounds": [
+      "DRUM_HIT",
+      "DRUM1",
+      "DRUM_DIE"
+    ],
+    "difficulty": 2
+  },
+  "Duck": {
+    "design": "m_duck",
+    "word": "duck",
+    "altWords": [
+      "rubberduck"
+    ],
+    "hitSounds": [
+      "DUCK_HIT",
+      "DUCK_DIE"
+    ],
+    "difficulty": 2
+  },
+  "Dynamite": {
+    "design": "m_dynamite",
+    "word": "dynamite",
+    "hitSounds": [
+      "BROCOLLI_SLICE1",
+      "BROCOLLI_SLICE2",
+      "BROCOLLI_SLICE2"
+    ],
+    "fx": [
+      "fireball",
+      "sparks"
+    ],
+    "difficulty": 7
+  },
+  "Egg": {
+    "design": "m_egg",
+    "word": "egg",
+    "hitSounds": [
+      "EGG_HIT",
+      "EGG_HIT",
+      "EGG_HIT"
+    ],
+    "splat": {
+      "counts": [
+        0,
+        5,
+        8
+      ],
+      "brightness": 0,
+      "contrast": 72,
+      "saturation": -57,
+      "hue": -11
+    },
+    "contains": [
+      "Apple",
+      "Banana",
+      "Grape"
+    ],
+    "difficulty": 1
+  },
+  "Eggplant": {
+    "design": "m_eggplant",
+    "word": "aubergine",
+    "altWords": [
+      "eggplant"
+    ],
+    "hitSounds": [
+      "EGGPLANT_HIT",
+      "EGGPLANT1",
+      "EGGPLANT_DIE"
+    ],
+    "difficulty": 5
+  },
+  "Fan": {
+    "design": "m_fan",
+    "word": "fan",
+    "hitSounds": [
+      "FAN_HIT",
+      "FAN_DIE"
+    ],
+    "fx": [
+      "sparks",
+      "electric"
+    ],
+    "difficulty": 1
+  },
+  "Feather": {
+    "design": "m_feather",
+    "word": "feather",
+    "hitSounds": [
+      "FEATHER_HIT",
+      "flower_1_wav"
+    ],
+    "difficulty": 5
+  },
+  "Fireextinguisher": {
+    "design": "m_fireextinguiser",
+    "word": "fireextinguisher",
+    "hitSounds": [
+      "FIREEXTINGUISHER_HIT",
+      "FIREEXTINGUISHER_DIE"
+    ],
+    "splat": {
+      "counts": [
+        3,
+        12
+      ],
+      "brightness": 0,
+      "contrast": 72,
+      "saturation": -57,
+      "hue": -111
+    },
+    "fx": [
+      "fireball",
+      "sparks"
+    ],
+    "difficulty": 7
+  },
+  "Flower": {
+    "design": "m_flower",
+    "word": "flower",
+    "hitSounds": [
+      "flower_1_wav",
+      "flower_2_wav"
+    ],
+    "difficulty": 4
+  },
+  "Football": {
+    "design": "m_football",
+    "word": "football",
+    "altWords": [
+      "soccer"
+    ],
+    "hitSounds": [
+      "BASKETBALL_HIT1",
+      "BASKETBALL_HIT2",
+      "BASKETBALL_HIT3"
+    ],
+    "difficulty": 3
+  },
+  "Fork": {
+    "design": "m_fork",
+    "word": "fork",
+    "hitSounds": [
+      "FORK_HIT",
+      "FORK1",
+      "FORK_DIE"
+    ],
+    "unusedInEN": true
+  },
+  "Fortune": {
+    "design": "m_fortune",
+    "word": "fortunecookie",
+    "hitSounds": [
+      "FORTUNE1",
+      "FORTUNE2",
+      "FORTUNE3",
+      "FORTUNE4"
+    ],
+    "difficulty": 6
+  },
+  "Glasses": {
+    "design": "m_glasses",
+    "word": "glasses",
+    "hitSounds": [
+      "GLASSES_HIT",
+      "GLASSES_DIE"
+    ],
+    "difficulty": 6
+  },
+  "Globe": {
+    "design": "m_globe",
+    "word": "globe",
+    "hitSounds": [
+      "globe_1_wav",
+      "globe_2_wav"
+    ],
+    "fx": [
+      "sparks"
+    ],
+    "difficulty": 5
+  },
+  "Gramophone": {
+    "design": "m_gramophone",
+    "word": "gramophone",
+    "hitSounds": [
+      "gramophone_1_wav",
+      "gramophone_2_wav",
+      "gramophone_3_wav",
+      "gramophone_4_wav"
+    ],
+    "fx": [
+      "sparks",
+      "electric"
+    ],
+    "difficulty": 6
+  },
+  "Grape": {
+    "design": "m_grapes",
+    "word": "grapes",
+    "hitSounds": [
+      "GRAPE_HIT",
+      "GRAPE1",
+      "GRAPE_DIE"
+    ],
+    "splat": {
+      "counts": [
+        3,
+        4,
+        5
+      ],
+      "brightness": 0,
+      "contrast": 73,
+      "saturation": 33,
+      "hue": -150
+    },
+    "difficulty": 4
+  },
+  "Grenade": {
+    "design": "m_grenade",
+    "word": "grenade",
+    "hitSounds": [
+      "BROCOLLI_SLICE1",
+      "BROCOLLI_SLICE2",
+      "BROCOLLI_SLICE2"
+    ],
+    "fx": [
+      "fireball",
+      "sparks"
+    ],
+    "difficulty": 6
+  },
+  "Guitar": {
+    "design": "m_guitar",
+    "word": "guitar",
+    "hitSounds": [
+      "GUITAR_HIT",
+      "GUITAR1",
+      "GUITAR2",
+      "GUITAR_DIE"
+    ],
+    "difficulty": 3
+  },
+  "Hairdryer": {
+    "design": "m_hairdryer",
+    "word": "hairdryer",
+    "hitSounds": [
+      "hairdryer_1_wav",
+      "hairdryer_2_wav",
+      "hairdryer_3_wav"
+    ],
+    "fx": [
+      "electric"
+    ],
+    "difficulty": 6
+  },
+  "Hammer": {
+    "design": "m_hammer",
+    "word": "hammer",
+    "hitSounds": [
+      "HAMMER_HIT",
+      "HAMMER1",
+      "HAMMER_DIE"
+    ],
+    "difficulty": 3
+  },
+  "Hanger": {
+    "design": "m_hanger",
+    "word": "hanger",
+    "hitSounds": [
+      "hanger_1_wav",
+      "hanger_2_wav",
+      "hanger_3_wav"
+    ],
+    "difficulty": 2
+  },
+  "Iron": {
+    "design": "m_iron",
+    "word": "iron",
+    "hitSounds": [
+      "iron_1_wav",
+      "iron_2_wav",
+      "iron_3_wav"
+    ],
+    "fx": [
+      "sparks",
+      "electric"
+    ],
+    "difficulty": 4
+  },
+  "Jelly": {
+    "design": "m_jelly",
+    "word": "jelly",
+    "hitSounds": [
+      "jelly_1_wav",
+      "jelly_2_wav",
+      "jelly_3_wav"
+    ],
+    "splat": {
+      "counts": [
+        5,
+        7,
+        16
+      ],
+      "brightness": 0,
+      "contrast": 0,
+      "saturation": 0,
+      "hue": -72
+    },
+    "difficulty": 4
+  },
+  "Kettle": {
+    "design": "m_kettle",
+    "word": "kettle",
+    "hitSounds": [
+      "KETTLE_HIT",
+      "KETTLE1",
+      "KETTLE_DIE"
+    ],
+    "fx": [
+      "sparks",
+      "electric"
+    ],
+    "difficulty": 4
+  },
+  "Lantern": {
+    "design": "m_lantern",
+    "word": "lantern",
+    "hitSounds": [
+      "lantern_1_wav",
+      "lantern_2_wav",
+      "lantern_3_wav"
+    ],
+    "fx": [
+      "fireball"
+    ],
+    "difficulty": 5
+  },
+  "Lemon": {
+    "design": "m_lemon",
+    "word": "lemon",
+    "hitSounds": [
+      "LEMON_HIT",
+      "PINEAPPLE1",
+      "PINEAPPLE2",
+      "LEMON_DIE"
+    ],
+    "splat": {
+      "counts": [
+        3,
+        4,
+        5,
+        10
+      ],
+      "brightness": 3,
+      "contrast": 73,
+      "saturation": -28,
+      "hue": -88
+    },
+    "difficulty": 4
+  },
+  "Light": {
+    "design": "m_light",
+    "word": "light",
+    "hitSounds": [
+      "LIGHT_HIT"
+    ],
+    "unusedInEN": true
+  },
+  "Lightbulb": {
+    "design": "m_lightbulb",
+    "word": "lightbulb",
+    "hitSounds": [
+      "LIGHTBULB_HIT"
+    ],
+    "unusedInEN": true
+  },
+  "Matches": {
+    "design": "m_matches",
+    "word": "matches",
+    "hitSounds": [
+      "MATCHES_HIT"
+    ],
+    "unusedInEN": true
+  },
+  "Microscope": {
+    "design": "m_microscope",
+    "word": "microscope",
+    "hitSounds": [
+      "MICROSCOPE_HIT"
+    ],
+    "unusedInEN": true
+  },
+  "Mushroom": {
+    "design": "m_mushroom",
+    "word": "mushroom",
+    "hitSounds": [
+      "BROCOLLI_SLICE1",
+      "BROCOLLI_SLICE2",
+      "BROCOLLI_SLICES",
+      "PINEAPPLE2",
+      "PINEAPPLE_DIE"
+    ],
+    "difficulty": 4
+  },
+  "Onion": {
+    "design": "m_onion",
+    "word": "onion",
+    "wordEs": "cebolla",
+    "hitSounds": [
+      "ONION_HIT",
+      "BROCOLLI_SLICE2",
+      "BROCOLLI_SLICES",
+      "PINEAPPLE2",
+      "ONION_DIE"
+    ],
+    "difficulty": 4,
+    "esMode": true
+  },
+  "Orange": {
+    "design": "m_orange",
+    "word": "orange",
+    "hitSounds": [
+      "ORANGE_HIT",
+      "ORANGE1",
+      "ORANGE_DIE"
+    ],
+    "splat": {
+      "counts": [
+        3,
+        5,
+        7
+      ],
+      "brightness": 0,
+      "contrast": 0,
+      "saturation": 10,
+      "hue": -88
+    },
+    "difficulty": 4
+  },
+  "Paintbrush": {
+    "design": "m_paintbrush",
+    "word": "paintbrush",
+    "wordEs": "pincel",
+    "hitSounds": [
+      "PAINTBRUSH_HIT",
+      "PEN1",
+      "PEN_HIT",
+      "PAINTBRUSH_DIE"
+    ],
+    "difficulty": 5,
+    "esMode": true
+  },
+  "Pen": {
+    "design": "m_pen",
+    "word": "pen",
+    "hitSounds": [
+      "PEN_HIT",
+      "PEN1",
+      "PEN_DIE"
+    ],
+    "difficulty": 1
+  },
+  "Pencil": {
+    "design": "m_pencil",
+    "word": "pencil",
+    "hitSounds": [
+      "PEN_HIT",
+      "PEN1",
+      "PAINTBRUSH_DIE"
+    ],
+    "difficulty": 3
+  },
+  "Piano": {
+    "design": "m_piano",
+    "word": "piano",
+    "hitSounds": [
+      "PIANO_HIT1",
+      "PIANO_HIT2",
+      "PIANO_HIT3",
+      "PIANO_HIT4"
+    ],
+    "soundsRndPitch": false,
+    "difficulty": 3
+  },
+  "Piggybank": {
+    "design": "m_piggybank",
+    "word": "piggybank",
+    "hitSounds": [
+      "PIGGYBANK_HIT",
+      "PIGGYBANK1",
+      "PIGGYBANK2",
+      "PIGGYBANK3",
+      "PIGGYBANK_DIE"
+    ],
+    "difficulty": 6
+  },
+  "Pineapple": {
+    "design": "m_pineapple",
+    "word": "pineapple",
+    "hitSounds": [
+      "PINEAPPLE_HIT",
+      "PINEAPPLE1",
+      "PINEAPPLE2",
+      "PINEAPPLE_DIE"
+    ],
+    "splat": {
+      "counts": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "brightness": 0,
+      "contrast": 0,
+      "saturation": 14,
+      "hue": -42
+    },
+    "difficulty": 5
+  },
+  "Pizza": {
+    "design": "m_pizza",
+    "word": "pizza",
+    "hitSounds": [
+      "PIZZA_HIT",
+      "PIZZA_DIE"
+    ],
+    "splat": {
+      "counts": [
+        3,
+        5,
+        8
+      ],
+      "brightness": 9,
+      "contrast": 23,
+      "saturation": -85,
+      "hue": -116
+    },
+    "contains": [
+      "Tomato",
+      "Cheese",
+      "Tomato",
+      "Mushroom"
+    ],
+    "difficulty": 3
+  },
+  "Polaroid": {
+    "design": "m_polaroid",
+    "word": "polaroid",
+    "hitSounds": [
+      "POLAROID_HIT",
+      "POLAROID1",
+      "POLAROID_DIE"
+    ],
+    "fx": [
+      "sparks",
+      "electric"
+    ],
+    "difficulty": 7
+  },
+  "Postbox": {
+    "design": "m_postbox",
+    "word": "postbox",
+    "altWords": [
+      "letterbox",
+      "mailbox"
+    ],
+    "hitSounds": [
+      "MAILBOX_HIT",
+      "MAILBOX_DIE"
+    ],
+    "fx": [
+      "sparks"
+    ],
+    "difficulty": 4
+  },
+  "Raspberry": {
+    "design": "m_raspberry",
+    "word": "raspberry",
+    "hitSounds": [
+      "RASPBERRY",
+      "STRAWBERRY",
+      "WATERMELON_DIE"
+    ],
+    "splat": {
+      "counts": [
+        3,
+        5,
+        8
+      ],
+      "brightness": 9,
+      "contrast": 23,
+      "saturation": 40,
+      "hue": -155
+    },
+    "difficulty": 8
+  },
+  "Robot": {
+    "design": "m_robot",
+    "word": "robot",
+    "hitSounds": [
+      "ROBOT_HIT",
+      "ROBOT1",
+      "ROBOT_DIE"
+    ],
+    "difficulty": 3
+  },
+  "Shovel": {
+    "design": "m_shovel",
+    "word": "shovel",
+    "altWords": [
+      "spade"
+    ],
+    "hitSounds": [
+      "shovel_1_wav",
+      "shovel_2_wav"
+    ],
+    "difficulty": 5
+  },
+  "Skateboard": {
+    "design": "m_skateboard",
+    "word": "skateboard",
+    "hitSounds": [
+      "SKATEBOARD_HIT",
+      "SKATEBOARD1",
+      "SKATEBOARD_DIE"
+    ],
+    "difficulty": 6
+  },
+  "Skull": {
+    "design": "m_skull",
+    "word": "skull",
+    "hitSounds": [
+      "SKULL_HIT",
+      "SKULL_DIE"
+    ],
+    "difficulty": 4
+  },
+  "Snowman": {
+    "design": "m_snowman",
+    "word": "snowman",
+    "hitSounds": [
+      "SNOWMAN_HIT",
+      "SNOWMAN_DIE"
+    ],
+    "splat": {
+      "counts": [
+        3,
+        5,
+        8
+      ],
+      "brightness": 100,
+      "contrast": 100,
+      "saturation": 100,
+      "hue": 180
+    },
+    "difficulty": 4
+  },
+  "Spoon": {
+    "design": "m_spoon",
+    "word": "spoon",
+    "hitSounds": [
+      "SPOON"
+    ],
+    "unusedInEN": true
+  },
+  "Stapler": {
+    "design": "m_stapler",
+    "word": "stapler",
+    "hitSounds": [
+      "STAPLER1",
+      "STAPLER2",
+      "STAPLER3"
+    ],
+    "difficulty": 5
+  },
+  "Stool": {
+    "design": "m_stool",
+    "word": "stool",
+    "hitSounds": [
+      "STOOL_HIT",
+      "STOOL_DIE"
+    ],
+    "difficulty": 3
+  },
+  "Strawberry": {
+    "design": "m_stawberry",
+    "word": "strawberry",
+    "hitSounds": [
+      "STRAWBERRY",
+      "WATERMELON_DIE"
+    ],
+    "splat": {
+      "counts": [
+        4,
+        7
+      ],
+      "brightness": 9,
+      "contrast": 23,
+      "saturation": -85,
+      "hue": -116
+    },
+    "difficulty": 4
+  },
+  "Sword": {
+    "design": "m_sword",
+    "word": "sword",
+    "hitSounds": [
+      "SWORD_HIT",
+      "SWORD1",
+      "SWORD_DIE"
+    ],
+    "difficulty": 4
+  },
+  "Tablelamp": {
+    "design": "m_tablelamp",
+    "word": "tablelamp",
+    "hitSounds": [
+      "TABLELAMP_HIT"
+    ],
+    "unusedInEN": true
+  },
+  "Telephonebox": {
+    "design": "m_telephonebox",
+    "word": "telephonebox",
+    "altWords": [
+      "phonebooth",
+      "phonebox"
+    ],
+    "hitSounds": [
+      "PHONEBOOTH_HIT",
+      "PHONEBOOTH1",
+      "PHONEBOOTH_DIE"
+    ],
+    "fx": [
+      "sparks"
+    ],
+    "difficulty": 6
+  },
+  "Television": {
+    "design": "m_television",
+    "word": "television",
+    "hitSounds": [
+      "TELEVISION1",
+      "TELEVISION2",
+      "TELEVISION3"
+    ],
+    "fx": [
+      "fireball",
+      "sparks",
+      "electric"
+    ],
+    "difficulty": 6
+  },
+  "Toaster": {
+    "design": "m_toaster",
+    "word": "toaster",
+    "hitSounds": [
+      "TOASTER_HIT",
+      "TOASTER_DIE"
+    ],
+    "difficulty": 5
+  },
+  "Toilet": {
+    "design": "m_toilet",
+    "word": "toilet",
+    "hitSounds": [
+      "toilet_1_wav",
+      "toilet_2_wav",
+      "toilet_3_wav"
+    ],
+    "difficulty": 5
+  },
+  "Tomato": {
+    "design": "m_tomato",
+    "word": "tomato",
+    "wordEs": "tomate",
+    "hitSounds": [
+      "TOMATO_HIT",
+      "TOMATO1",
+      "TOMATO_DIE"
+    ],
+    "splat": {
+      "counts": [
+        5,
+        7,
+        12
+      ],
+      "brightness": 9,
+      "contrast": 23,
+      "saturation": -85,
+      "hue": -116
+    },
+    "difficulty": 4,
+    "esMode": true
+  },
+  "Toothbrush": {
+    "design": "m_toothbrush",
+    "word": "toothbrush",
+    "hitSounds": [
+      "TOOTHBRUSH_HIT",
+      "TOOTHBRUSH_DIE"
+    ],
+    "difficulty": 5
+  },
+  "Trophy": {
+    "design": "m_trophy",
+    "word": "trophy",
+    "hitSounds": [
+      "trophy1_snd",
+      "trophy2_snd"
+    ],
+    "difficulty": 6
+  },
+  "Trumpet": {
+    "design": "m_trumpet",
+    "word": "trumpet",
+    "hitSounds": [
+      "TRUMPET1",
+      "TRUMPET2",
+      "TRUMPET3",
+      "TRUMPET4"
+    ],
+    "soundsRndPitch": false,
+    "difficulty": 5
+  },
+  "Typewriter": {
+    "design": "m_typewriter",
+    "word": "typewriter",
+    "hitSounds": [
+      "TYPEWRITER_HIT",
+      "TYPEWRITER_DIE"
+    ],
+    "fx": [
+      "sparks"
+    ],
+    "difficulty": 5
+  },
+  "Tyre": {
+    "design": "m_tyre",
+    "word": "tyre",
+    "wordEs": "tiro",
+    "hitSounds": [
+      "TYRE_HIT",
+      "TYRE_DIE"
+    ],
+    "difficulty": 4,
+    "esMode": true
+  },
+  "Umbrella": {
+    "design": "m_umbrella",
+    "word": "umbrella",
+    "hitSounds": [],
+    "unusedInEN": true
+  },
+  "Vase": {
+    "design": "m_vase",
+    "word": "vase",
+    "hitSounds": [
+      "VASE_HIT",
+      "VASE1",
+      "VASE_DIE"
+    ],
+    "difficulty": 3
+  },
+  "Violin": {
+    "design": "m_violin",
+    "word": "violin",
+    "hitSounds": [
+      "TYPEWRITER_HIT",
+      "VIOLIN_DIE"
+    ],
+    "difficulty": 4
+  },
+  "Volleyball": {
+    "design": "m_volleyball",
+    "word": "volleyball",
+    "hitSounds": [
+      "VOLLEYBALL_HIT",
+      "VOLLEYBALL_DIE"
+    ],
+    "difficulty": 4
+  },
+  "Watermelon": {
+    "design": "m_watermelon",
+    "word": "watermelon",
+    "hitSounds": [
+      "WATERMELON_HIT",
+      "WATERMELON1",
+      "PINEAPPLE2",
+      "WATERMELON_DIE"
+    ],
+    "splat": {
+      "counts": [
+        5,
+        7,
+        7,
+        12
+      ],
+      "brightness": 0,
+      "contrast": 0,
+      "saturation": 45,
+      "hue": -117
+    },
+    "difficulty": 4
+  },
+  "Wheelbarrow": {
+    "design": "m_wheelbarrow",
+    "word": "wheelbarrow",
+    "hitSounds": [
+      "WHEELBARROW_HIT"
+    ],
+    "difficulty": 5
+  }
+}

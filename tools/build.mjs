@@ -669,10 +669,18 @@ function html5Page(g) {
   // Some builds rasterise text with a web font; declare it and keep an
   // off-screen probe so the browser fetches it before the game does.
   const font = (g.play && g.play.font) || null;
-  const fontStyle = font
+  let fontStyle = font
     ? `\n  <style>@font-face{font-family:'${font.family}';src:url('./${font.file}') format('truetype');font-display:block;}#fontprobe{position:absolute;left:-9999px;font-family:'${font.family}';}</style>`
     : "";
   const fontProbe = font ? `\n  <div id="fontprobe">.</div>` : "";
+  // Others (BrainDrops) take theirs from Google Fonts; mirror the dist page's links.
+  if (g.play && g.play.googleFonts) {
+    fontStyle =
+      `\n  <link rel="preconnect" href="https://fonts.googleapis.com">` +
+      `\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
+      `\n  <link href="${esc(g.play.googleFonts)}" rel="stylesheet">` +
+      fontStyle;
+  }
 
   return `<!DOCTYPE html>
 <html lang="en">

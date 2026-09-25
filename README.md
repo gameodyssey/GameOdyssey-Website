@@ -52,6 +52,18 @@ remove the stale `assets/index-*.js`, run `node tools/build.mjs`). The gentle
 unlinked in `play/backgammon/` (with the stray GoGammon copies in
 `play/bug-me-not/Build/` still a delete candidate).
 
+## Brain Drops (HTML5 remake)
+
+`play/braindrops/` is the HTML5 build of Brain Drops (Phaser/Vite, native
+2048×1536, source at `C:/dev/BrainDrops/braindrops-html5`). Wired like the
+others via `"play": { "dir": "braindrops", "html5": true, ... }`; it takes its
+display font (Baloo 2) from Google Fonts, declared with `play.googleFonts` so
+the wrapper mirrors the build's font links. The gentle `loader` block is in the
+game's `src/main.ts`. Heads-up: the build is ~123 MB across ~1,270 files
+(3D-model textures up to 4096px), so uploads take a while and Hostinger's CDN
+image optimisation must stay OFF or those textures get resized and break. The
+old Unity build stays unlinked in `play/brain-drops/`.
+
 ## Bug Me Not (HTML5 remake)
 
 `play/bugmenot/` is the HTML5 build of Bug Me Not (Phaser/Vite, native

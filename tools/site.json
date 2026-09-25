@@ -105,14 +105,18 @@
         "Single play or one-on-one"
       ],
       "playable": true,
-      "unity": {
-        "build": "BrainDrops",
-        "width": 1024,
-        "height": 768
-      },
+      "unity": null,
       "shots": 3,
       "accent": "#2f8f4e",
-      "heroPosition": "center top"
+      "heroPosition": "center top",
+      "play": {
+        "dir": "braindrops",
+        "html5": true,
+        "width": 2048,
+        "height": 1536,
+        "googleFonts": "https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap",
+        "note": "Phaser/Vite build from C:/dev/BrainDrops/braindrops-html5 (native 2048x1536, Baloo 2 from Google Fonts). The old Unity build stays in play/brain-drops/ but nothing links to it."
+      }
     },
     {
       "slug": "bug-me-not",

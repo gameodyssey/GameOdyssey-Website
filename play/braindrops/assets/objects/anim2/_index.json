@@ -1,0 +1,354 @@
+{
+ "egg": {
+  "file": "egg.json",
+  "frames": 143
+ },
+ "piggybank": {
+  "file": "piggybank.json",
+  "frames": 160
+ },
+ "polaroid": {
+  "file": "polaroid.json",
+  "frames": 262
+ },
+ "fortune": {
+  "file": "fortune.json",
+  "frames": 230
+ },
+ "cassette": {
+  "file": "cassette.json",
+  "frames": 172
+ },
+ "apple": {
+  "file": "apple.json",
+  "frames": 148
+ },
+ "banana": {
+  "file": "banana.json",
+  "frames": 160
+ },
+ "cup": {
+  "file": "cup.json",
+  "frames": 160
+ },
+ "arrow": {
+  "file": "arrow.json",
+  "frames": 153
+ },
+ "basketball": {
+  "file": "basketball.json",
+  "frames": 185
+ },
+ "bat": {
+  "file": "bat.json",
+  "frames": 160
+ },
+ "bathtub": {
+  "file": "bathtub.json",
+  "frames": 160
+ },
+ "bomb": {
+  "file": "bomb.json",
+  "frames": 160
+ },
+ "boots": {
+  "file": "boots.json",
+  "frames": 190
+ },
+ "brick": {
+  "file": "brick.json",
+  "frames": 160
+ },
+ "broccoli": {
+  "file": "broccoli.json",
+  "frames": 138
+ },
+ "broom": {
+  "file": "broom.json",
+  "frames": 160
+ },
+ "brush": {
+  "file": "brush.json",
+  "frames": 151
+ },
+ "bucket": {
+  "file": "bucket.json",
+  "frames": 160
+ },
+ "calculator": {
+  "file": "calculator.json",
+  "frames": 160
+ },
+ "camera": {
+  "file": "camera.json",
+  "frames": 237
+ },
+ "carrot": {
+  "file": "carrot.json",
+  "frames": 151
+ },
+ "chair": {
+  "file": "chair.json",
+  "frames": 117
+ },
+ "cheese": {
+  "file": "cheese.json",
+  "frames": 230
+ },
+ "chilli": {
+  "file": "chilli.json",
+  "frames": 155
+ },
+ "clock": {
+  "file": "clock.json",
+  "frames": 171
+ },
+ "coconut": {
+  "file": "coconut.json",
+  "frames": 139
+ },
+ "compactdisk": {
+  "file": "compactdisk.json",
+  "frames": 160
+ },
+ "crown": {
+  "file": "crown.json",
+  "frames": 160
+ },
+ "cucumber": {
+  "file": "cucumber.json",
+  "frames": 160
+ },
+ "dart": {
+  "file": "dart.json",
+  "frames": 160
+ },
+ "doughnut": {
+  "file": "doughnut.json",
+  "frames": 160
+ },
+ "drum": {
+  "file": "drum.json",
+  "frames": 180
+ },
+ "duck": {
+  "file": "duck.json",
+  "frames": 160
+ },
+ "dynamite": {
+  "file": "dynamite.json",
+  "frames": 160
+ },
+ "eggplant": {
+  "file": "eggplant.json",
+  "frames": 136
+ },
+ "fan": {
+  "file": "fan.json",
+  "frames": 156
+ },
+ "feather": {
+  "file": "feather.json",
+  "frames": 160
+ },
+ "fireextinguiser": {
+  "file": "fireextinguiser.json",
+  "frames": 160
+ },
+ "flower": {
+  "file": "flower.json",
+  "frames": 160
+ },
+ "football": {
+  "file": "football.json",
+  "frames": 160
+ },
+ "glasses": {
+  "file": "glasses.json",
+  "frames": 161
+ },
+ "globe": {
+  "file": "globe.json",
+  "frames": 160
+ },
+ "gramophone": {
+  "file": "gramophone.json",
+  "frames": 160
+ },
+ "grapes": {
+  "file": "grapes.json",
+  "frames": 246
+ },
+ "grenade": {
+  "file": "grenade.json",
+  "frames": 160
+ },
+ "guitar": {
+  "file": "guitar.json",
+  "frames": 160
+ },
+ "hairdryer": {
+  "file": "hairdryer.json",
+  "frames": 160
+ },
+ "hammer": {
+  "file": "hammer.json",
+  "frames": 139
+ },
+ "hanger": {
+  "file": "hanger.json",
+  "frames": 160
+ },
+ "iron": {
+  "file": "iron.json",
+  "frames": 160
+ },
+ "kettle": {
+  "file": "kettle.json",
+  "frames": 230
+ },
+ "lantern": {
+  "file": "lantern.json",
+  "frames": 160
+ },
+ "lemon": {
+  "file": "lemon.json",
+  "frames": 160
+ },
+ "onion": {
+  "file": "onion.json",
+  "frames": 160
+ },
+ "orange": {
+  "file": "orange.json",
+  "frames": 230
+ },
+ "paintbrush": {
+  "file": "paintbrush.json",
+  "frames": 160
+ },
+ "pen": {
+  "file": "pen.json",
+  "frames": 137
+ },
+ "pencil": {
+  "file": "pencil.json",
+  "frames": 132
+ },
+ "piano": {
+  "file": "piano.json",
+  "frames": 216
+ },
+ "pineapple": {
+  "file": "pineapple.json",
+  "frames": 148
+ },
+ "pizza": {
+  "file": "pizza.json",
+  "frames": 160
+ },
+ "postbox": {
+  "file": "postbox.json",
+  "frames": 155
+ },
+ "raspberry": {
+  "file": "raspberry.json",
+  "frames": 160
+ },
+ "robot": {
+  "file": "robot.json",
+  "frames": 169
+ },
+ "shovel": {
+  "file": "shovel.json",
+  "frames": 145
+ },
+ "skateboard": {
+  "file": "skateboard.json",
+  "frames": 160
+ },
+ "skull": {
+  "file": "skull.json",
+  "frames": 167
+ },
+ "snowman": {
+  "file": "snowman.json",
+  "frames": 160
+ },
+ "stapler": {
+  "file": "stapler.json",
+  "frames": 160
+ },
+ "stool": {
+  "file": "stool.json",
+  "frames": 148
+ },
+ "stawberry": {
+  "file": "stawberry.json",
+  "frames": 155
+ },
+ "sword": {
+  "file": "sword.json",
+  "frames": 160
+ },
+ "telephonebox": {
+  "file": "telephonebox.json",
+  "frames": 160
+ },
+ "television": {
+  "file": "television.json",
+  "frames": 160
+ },
+ "toaster": {
+  "file": "toaster.json",
+  "frames": 160
+ },
+ "toilet": {
+  "file": "toilet.json",
+  "frames": 160
+ },
+ "tomato": {
+  "file": "tomato.json",
+  "frames": 145
+ },
+ "toothbrush": {
+  "file": "toothbrush.json",
+  "frames": 160
+ },
+ "trophy": {
+  "file": "trophy.json",
+  "frames": 160
+ },
+ "trumpet": {
+  "file": "trumpet.json",
+  "frames": 156
+ },
+ "typewriter": {
+  "file": "typewriter.json",
+  "frames": 160
+ },
+ "tyre": {
+  "file": "tyre.json",
+  "frames": 166
+ },
+ "vase": {
+  "file": "vase.json",
+  "frames": 160
+ },
+ "violin": {
+  "file": "violin.json",
+  "frames": 160
+ },
+ "volleyball": {
+  "file": "volleyball.json",
+  "frames": 172
+ },
+ "watermelon": {
+  "file": "watermelon.json",
+  "frames": 144
+ },
+ "wheelbarrow": {
+  "file": "wheelbarrow.json",
+  "frames": 160
+ }
+}
